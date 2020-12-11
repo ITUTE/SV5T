@@ -1,4 +1,9 @@
 # **SINH VIÊN 5 TỐT**
+
+<p align="center">
+  <img src="images/social-networks/sv5t.png" alt="#SV5T">
+</p>
+
 ## DANH SÁCH CÁC FANPAGES, GROUPS CẦN BIẾT
 
 ### **1. Fanpages**
