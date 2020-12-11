@@ -131,3 +131,24 @@
 
 ----
 
+#### **2. Groups**
+
+- ***DIỄN ĐÀN SINH VIÊN CÔNG NGHỆ THÔNG TIN - ĐẠI HỌC SƯ PHẠM KỸ THUẬT TP.HCM***
+  - [👉Link FB](https://www.facebook.com/groups/cnttspkt)
+
+![](images/social-networks/gcntt.png)
+
+----
+
+- ***Sinh viên trường ĐH Sư phạm Kỹ thuật TP.HCM***
+  - [👉Link FB](https://www.facebook.com/groups/utehcmc)
+
+![](images/social-networks/gspkt.png)
+
+----
+
+- ***SINH VIÊN 5 TỐT-KHOA CÔNG NGHỆ THÔNG TIN-TRƯỜNG ĐH SƯ PHẠM KỸ THUẬT TP.HCM***
+  - [👉Link FB](https://www.facebook.com/groups/itute.sv5t)
+
+![](images/social-networks/gsv5t.png)
+
