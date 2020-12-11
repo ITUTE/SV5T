@@ -152,3 +152,44 @@
 
 ![](images/social-networks/gsv5t.png)
 
+----
+
+### **3. Các đơn vị khác**
+
+#### - ***FHQ News - Khoa Đào tạo Chất lượng cao - ĐH Sư Phạm Kỹ thuật TP.HCM***
+  - @youthfhq
+  - [👉Link FB](https://www.facebook.com/youthfhq)
+
+![@youthfhq](images/social-networks/fhq.png)
+
+----
+
+#### - ***Đoàn - Hội Khoa Kinh tế - ĐH Sư phạm Kỹ thuật Tp.HCM***
+  - @yecom.hcmute
+  - [👉Link FB](https://www.facebook.com/yecom.hcmute)
+
+![@yecom.hcmute](images/social-networks/kte.png)
+
+----
+
+#### - ***Trang Thông Tin Đoàn - Hội Khoa Cơ Khí Động Lực***
+  - @thongtinckd  
+  - [👉Link FB](https://www.facebook.com/thongtinckd)
+
+![@thongtinckd](images/social-networks/ckd.png)
+
+----
+
+#### - ****Trang thông tin của Đoàn - Hội Khoa CKM***
+  - @doankhoacokhichetaomay
+  - [👉Link FB](https://www.facebook.com/doankhoacokhichetaomay)
+
+![@doankhoacokhichetaomay](images/social-networks/ckm.png)
+
+----
+
+#### - ****Đoàn TN - Hội SV Khoa Điện - Điện Tử SPKT***
+  - @Doan.Hoi.FEEE.SPKT
+  - [👉Link FB](https://www.facebook.com/Doan.Hoi.FEEE.SPKT)
+
+![@Doan.Hoi.FEEE.SPKT](images/social-networks/feee.png)
