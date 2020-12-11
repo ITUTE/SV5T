@@ -7,7 +7,7 @@
   - @DoanHoiITUTE
   - [👉Link FB](https://www.facebook.com/DoanHoiITUTE)
 
-![@DoanHoiITUTE](images/social-networks/doanhoiitute.png)
+![@DoanHoiITUTE](images/social-networks/doanhoiitute-min.png)
 
 ----
 
@@ -15,7 +15,7 @@
   - @fit.hcmute.edu.vn
   - [👉Link FB](https://www.facebook.com/fit.hcmute.edu.vn/)
 
-![@fit.hcmute.edu.vn](images/social-networks/fit.png)
+![@fit.hcmute.edu.vn](images/social-networks/fit-min.png)
 
 ----
 
@@ -23,7 +23,7 @@
   - @dhspkt.hcmute
   - [👉Link FB](https://www.facebook.com/dhspkt.hcmute)
 
-![@dhspkt.hcmute](images/social-networks/dhspkt.png)
+![@dhspkt.hcmute](images/social-networks/dhspkt-min.png)
 
 ----
 
@@ -31,7 +31,7 @@
   - @pdtspkt
   - [👉Link FB](https://www.facebook.com/pdtspkt)
 
-![@pdtspkt](images/social-networks/aao.png)
+![@pdtspkt](images/social-networks/aao-min.png)
 
 ----
 
@@ -39,7 +39,7 @@
   - @ute.sao
   - [👉Link FB](https://www.facebook.com/ute.sao)
 
-![@ute.sao](images/social-networks/sao.png)
+![@ute.sao](images/social-networks/sao-min.png)
 
 ----
 
@@ -47,7 +47,7 @@
   - @tuyensinhspkttphcm
   - [👉Link FB](https://www.facebook.com/tuyensinhspkttphcm)
 
-![@tuyensinhspkttphcm](images/social-networks/tuyensinh.png)
+![@tuyensinhspkttphcm](images/social-networks/tuyensinh-min.png)
 
 ----
 
@@ -55,7 +55,7 @@
   - @hotrosinhvienspkt
   - [👉Link FB](https://www.facebook.com/hotrosinhvienspkt)
 
-![@hotrosinhvienspkt](images/social-networks/sacute.png)
+![@hotrosinhvienspkt](images/social-networks/sacute-min.png)
 
 ----
 
@@ -63,7 +63,7 @@
   - @erohcmute
   - [👉Link FB](https://www.facebook.com/erohcmute)
 
-![@erohcmute](images/social-networks/ero.png)
+![@erohcmute](images/social-networks/ero-min.png)
 
 ----
 
@@ -71,7 +71,7 @@
   - @HCMUTETV
   - [👉Link FB](https://www.facebook.com/HCMUTETV)
 
-![@HCMUTETV](images/social-networks/utetv.png)
+![@HCMUTETV](images/social-networks/utetv-min.png)
 
 ----
 
@@ -79,7 +79,7 @@
   - @thongtindoanhoiute 
   - [👉Link FB](https://www.facebook.com/thongtindoanhoiute)
 
-![@thongtindoanhoiute](images/social-networks/dhute.png)
+![@thongtindoanhoiute](images/social-networks/dhute-min.png)
 
 ----
 
@@ -87,7 +87,7 @@
   - @hsv.spkt
   - [👉Link FB](https://www.facebook.com/hsv.spkt)
 
-![@hsv.spkt](images/social-networks/hsv.png)
+![@hsv.spkt](images/social-networks/hsv-min.png)
 
 ----
 
@@ -95,7 +95,7 @@
   - @thuviendaihocspkttphcm
   - [👉Link FB](https://www.facebook.com/thuviendaihocspkttphcm)
 
-![@thuviendaihocspkttphcm](images/social-networks/lib.png)
+![@thuviendaihocspkttphcm](images/social-networks/lib-min.png)
 
 ----
 
@@ -103,7 +103,7 @@
   - @gocsechiaute 
   - [👉Link FB](https://www.facebook.com/gocsechiaute)
 
-![@gocsechiaute](images/social-networks/gocsechia.png)
+![@gocsechiaute](images/social-networks/gocsechia-min.png)
 
 ----
 
@@ -111,7 +111,7 @@
   - @
   - [👉Link FB](https://www.facebook.com/Tr%E1%BA%A1m-Y-T%E1%BA%BF-%C4%90H-SPKT-TP-HCM-175235509664123)
 
-![@](images/social-networks/yte.png)
+![@](images/social-networks/yte-min.png)
 
 ----
 
@@ -119,7 +119,7 @@
   - @TSMTUTE
   - [👉Link FB](https://www.facebook.com/TSMTUTE)
 
-![@TSMTUTE](images/social-networks/tsmt.png)
+![@TSMTUTE](images/social-networks/tsmt-min.png)
 
 ----
 
@@ -127,7 +127,7 @@
   - @xtnspkt
   - [👉Link FB](https://www.facebook.com/xtnspkt)
 
-![@xtnspkt](images/social-networks/xtn.png)
+![@xtnspkt](images/social-networks/xtn-min.png)
 
 ----
 
@@ -136,21 +136,21 @@
 #### - ***DIỄN ĐÀN SINH VIÊN CÔNG NGHỆ THÔNG TIN - ĐẠI HỌC SƯ PHẠM KỸ THUẬT TP.HCM***
   - [👉Link FB](https://www.facebook.com/groups/cnttspkt)
 
-![](images/social-networks/gcntt.png)
+![](images/social-networks/gcntt-min.png)
 
 ----
 
 #### - ***Sinh viên trường ĐH Sư phạm Kỹ thuật TP.HCM***
   - [👉Link FB](https://www.facebook.com/groups/utehcmc)
 
-![](images/social-networks/gspkt.png)
+![](images/social-networks/gspkt-min.png)
 
 ----
 
 #### - ***SINH VIÊN 5 TỐT-KHOA CÔNG NGHỆ THÔNG TIN-TRƯỜNG ĐH SƯ PHẠM KỸ THUẬT TP.HCM***
   - [👉Link FB](https://www.facebook.com/groups/itute.sv5t)
 
-![](images/social-networks/gsv5t.png)
+![](images/social-networks/gsv5t-min.png)
 
 ----
 
@@ -160,7 +160,7 @@
   - @youthfhq
   - [👉Link FB](https://www.facebook.com/youthfhq)
 
-![@youthfhq](images/social-networks/fhq.png)
+![@youthfhq](images/social-networks/fhq-min.png)
 
 ----
 
@@ -168,7 +168,7 @@
   - @yecom.hcmute
   - [👉Link FB](https://www.facebook.com/yecom.hcmute)
 
-![@yecom.hcmute](images/social-networks/kte.png)
+![@yecom.hcmute](images/social-networks/kte-min.png)
 
 ----
 
@@ -176,7 +176,7 @@
   - @thongtinckd  
   - [👉Link FB](https://www.facebook.com/thongtinckd)
 
-![@thongtinckd](images/social-networks/ckd.png)
+![@thongtinckd](images/social-networks/ckd-min.png)
 
 ----
 
@@ -184,7 +184,7 @@
   - @doankhoacokhichetaomay
   - [👉Link FB](https://www.facebook.com/doankhoacokhichetaomay)
 
-![@doankhoacokhichetaomay](images/social-networks/ckm.png)
+![@doankhoacokhichetaomay](images/social-networks/ckm-min.png)
 
 ----
 
@@ -192,7 +192,7 @@
   - @Doan.Hoi.FEEE.SPKT
   - [👉Link FB](https://www.facebook.com/Doan.Hoi.FEEE.SPKT)
 
-![@Doan.Hoi.FEEE.SPKT](images/social-networks/feee.png)
+![@Doan.Hoi.FEEE.SPKT](images/social-networks/feee-min.png)
 
 ----
 
@@ -200,4 +200,4 @@
   - @DoanHoiFCFT 
   - [👉Link FB](https://www.facebook.com/DoanHoiFCFT)
 
-![@DoanHoiFCFT](images/social-networks/hoa.png)
+![@DoanHoiFCFT](images/social-networks/hoa-min.png)
