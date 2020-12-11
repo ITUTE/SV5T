@@ -1,9 +1,9 @@
 # **SINH VIÊN 5 TỐT**
-### DANH SÁCH CÁC FANPAGES, GROUPS CẦN BIẾT
+## DANH SÁCH CÁC FANPAGES, GROUPS CẦN BIẾT
 
-#### **1. Fanpages**
+### **1. Fanpages**
 
-- ***Đoàn - Hội Khoa Công Nghệ Thông Tin - ĐH Sư phạm Kỹ thuật TP.HCM***
+#### - ***Đoàn - Hội Khoa Công Nghệ Thông Tin - ĐH Sư phạm Kỹ thuật TP.HCM***
   - @DoanHoiITUTE
   - [👉Link FB](https://www.facebook.com/DoanHoiITUTE)
 
@@ -11,7 +11,7 @@
 
 ----
 
-- ***Công nghệ Thông tin - Sư phạm Kỹ thuật Tp.HCM***
+#### - ***Công nghệ Thông tin - Sư phạm Kỹ thuật Tp.HCM***
   - @fit.hcmute.edu.vn
   - [👉Link FB](https://www.facebook.com/fit.hcmute.edu.vn/)
 
@@ -19,7 +19,7 @@
 
 ----
 
-- ***Trường ĐH Sư phạm Kỹ thuật TPHCM***
+#### - ***Trường ĐH Sư phạm Kỹ thuật TPHCM***
   - @dhspkt.hcmute
   - [👉Link FB](https://www.facebook.com/dhspkt.hcmute)
 
@@ -27,7 +27,7 @@
 
 ----
 
-- ***Phòng Đào Tạo - ĐH SPKT Tp.HCM***
+#### - ***Phòng Đào Tạo - ĐH SPKT Tp.HCM***
   - @pdtspkt
   - [👉Link FB](https://www.facebook.com/pdtspkt)
 
@@ -35,7 +35,7 @@
 
 ----
 
-- ***Phòng Tuyển sinh và Công tác Sinh viên SPKT***
+#### - ***Phòng Tuyển sinh và Công tác Sinh viên SPKT***
   - @ute.sao
   - [👉Link FB](https://www.facebook.com/ute.sao)
 
@@ -43,7 +43,7 @@
 
 ----
 
-- ***Tuyển sinh ĐH SPKT TPHCM***
+#### - ***Tuyển sinh ĐH SPKT TPHCM***
   - @tuyensinhspkttphcm
   - [👉Link FB](https://www.facebook.com/tuyensinhspkttphcm)
 
@@ -51,7 +51,7 @@
 
 ----
 
-- ***Sacute - Trung tâm Tư vấn & Hỗ trợ sinh viên ĐH SPKT Tp.HCM***
+#### - ***Sacute - Trung tâm Tư vấn & Hỗ trợ sinh viên ĐH SPKT Tp.HCM***
   - @hotrosinhvienspkt
   - [👉Link FB](https://www.facebook.com/hotrosinhvienspkt)
 
@@ -59,7 +59,7 @@
 
 ----
 
-- ***ERO - Phòng Quan hệ Doanh nghiệp trường ĐH SPKT TP.HCM***
+#### - ***ERO - Phòng Quan hệ Doanh nghiệp trường ĐH SPKT TP.HCM***
   - @erohcmute
   - [👉Link FB](https://www.facebook.com/erohcmute)
 
@@ -67,7 +67,7 @@
 
 ----
 
-- ***UTE TV - Kênh truyền hình trường Đại học Sư phạm Kỹ thuật TPHCM***
+#### - ***UTE TV - Kênh truyền hình trường Đại học Sư phạm Kỹ thuật TPHCM***
   - @HCMUTETV
   - [👉Link FB](https://www.facebook.com/HCMUTETV)
 
@@ -75,7 +75,7 @@
 
 ----
 
-- ***Thông Tin Đoàn Hội UTE***
+#### - ***Thông Tin Đoàn Hội UTE***
   - @thongtindoanhoiute 
   - [👉Link FB](https://www.facebook.com/thongtindoanhoiute)
 
@@ -83,7 +83,7 @@
 
 ----
 
-- ***Hội Sinh viên Việt Nam Trường Đại học Sư phạm Kỹ thuật TP.HCM***
+#### - ***Hội Sinh viên Việt Nam Trường Đại học Sư phạm Kỹ thuật TP.HCM***
   - @hsv.spkt
   - [👉Link FB](https://www.facebook.com/hsv.spkt)
 
@@ -91,7 +91,7 @@
 
 ----
 
-- *Thư viện Đại học Sư phạm Kỹ thuật Tp.HCM*
+#### - *Thư viện Đại học Sư phạm Kỹ thuật Tp.HCM*
   - @thuviendaihocspkttphcm
   - [👉Link FB](https://www.facebook.com/thuviendaihocspkttphcm)
 
@@ -99,7 +99,7 @@
 
 ----
 
-- ***Góc sẻ chia UTE***
+#### - ***Góc sẻ chia UTE***
   - @gocsechiaute 
   - [👉Link FB](https://www.facebook.com/gocsechiaute)
 
@@ -107,7 +107,7 @@
 
 ----
 
-- ***Trạm Y Tế ĐH SPKT TP HCM***
+#### - ***Trạm Y Tế ĐH SPKT TP HCM***
   - @
   - [👉Link FB](https://www.facebook.com/Tr%E1%BA%A1m-Y-T%E1%BA%BF-%C4%90H-SPKT-TP-HCM-175235509664123)
 
@@ -115,7 +115,7 @@
 
 ----
 
-- ***Tiếp sức mùa thi UTE***
+#### - ***Tiếp sức mùa thi UTE***
   - @TSMTUTE
   - [👉Link FB](https://www.facebook.com/TSMTUTE)
 
@@ -123,7 +123,7 @@
 
 ----
 
-- ***Xuân tình nguyện SPKT***
+#### - ***Xuân tình nguyện SPKT***
   - @xtnspkt
   - [👉Link FB](https://www.facebook.com/xtnspkt)
 
@@ -131,23 +131,23 @@
 
 ----
 
-#### **2. Groups**
+### **2. Groups**
 
-- ***DIỄN ĐÀN SINH VIÊN CÔNG NGHỆ THÔNG TIN - ĐẠI HỌC SƯ PHẠM KỸ THUẬT TP.HCM***
+#### - ***DIỄN ĐÀN SINH VIÊN CÔNG NGHỆ THÔNG TIN - ĐẠI HỌC SƯ PHẠM KỸ THUẬT TP.HCM***
   - [👉Link FB](https://www.facebook.com/groups/cnttspkt)
 
 ![](images/social-networks/gcntt.png)
 
 ----
 
-- ***Sinh viên trường ĐH Sư phạm Kỹ thuật TP.HCM***
+#### - ***Sinh viên trường ĐH Sư phạm Kỹ thuật TP.HCM***
   - [👉Link FB](https://www.facebook.com/groups/utehcmc)
 
 ![](images/social-networks/gspkt.png)
 
 ----
 
-- ***SINH VIÊN 5 TỐT-KHOA CÔNG NGHỆ THÔNG TIN-TRƯỜNG ĐH SƯ PHẠM KỸ THUẬT TP.HCM***
+#### - ***SINH VIÊN 5 TỐT-KHOA CÔNG NGHỆ THÔNG TIN-TRƯỜNG ĐH SƯ PHẠM KỸ THUẬT TP.HCM***
   - [👉Link FB](https://www.facebook.com/groups/itute.sv5t)
 
 ![](images/social-networks/gsv5t.png)
