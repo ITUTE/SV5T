@@ -72,3 +72,62 @@
   - [👉Link FB](https://www.facebook.com/HCMUTETV)
 
 ![@HCMUTETV](images/social-networks/utetv.png)
+
+----
+
+- ***Thông Tin Đoàn Hội UTE***
+  - @thongtindoanhoiute 
+  - [👉Link FB](https://www.facebook.com/thongtindoanhoiute)
+
+![@thongtindoanhoiute](images/social-networks/dhute.png)
+
+----
+
+- ***Hội Sinh viên Việt Nam Trường Đại học Sư phạm Kỹ thuật TP.HCM***
+  - @hsv.spkt
+  - [👉Link FB](https://www.facebook.com/hsv.spkt)
+
+![@hsv.spkt](images/social-networks/hsv.png)
+
+----
+
+- *Thư viện Đại học Sư phạm Kỹ thuật Tp.HCM*
+  - @thuviendaihocspkttphcm
+  - [👉Link FB](https://www.facebook.com/thuviendaihocspkttphcm)
+
+![@thuviendaihocspkttphcm](images/social-networks/lib.png)
+
+----
+
+- ***Góc sẻ chia UTE***
+  - @gocsechiaute 
+  - [👉Link FB](https://www.facebook.com/gocsechiaute)
+
+![@gocsechiaute](images/social-networks/gocsechia.png)
+
+----
+
+- ***Trạm Y Tế ĐH SPKT TP HCM***
+  - @
+  - [👉Link FB](https://www.facebook.com/Tr%E1%BA%A1m-Y-T%E1%BA%BF-%C4%90H-SPKT-TP-HCM-175235509664123)
+
+![@](images/social-networks/yte.png)
+
+----
+
+- ***Tiếp sức mùa thi UTE***
+  - @TSMTUTE
+  - [👉Link FB](https://www.facebook.com/TSMTUTE)
+
+![@TSMTUTE](images/social-networks/tsmt.png)
+
+----
+
+- ***Xuân tình nguyện SPKT***
+  - @xtnspkt
+  - [👉Link FB](https://www.facebook.com/xtnspkt)
+
+![@xtnspkt](images/social-networks/xtn.png)
+
+----
+
