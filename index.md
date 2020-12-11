@@ -188,8 +188,16 @@
 
 ----
 
-#### - ****Đoàn TN - Hội SV Khoa Điện - Điện Tử SPKT***
+#### - ***Đoàn TN - Hội SV Khoa Điện - Điện Tử SPKT***
   - @Doan.Hoi.FEEE.SPKT
   - [👉Link FB](https://www.facebook.com/Doan.Hoi.FEEE.SPKT)
 
 ![@Doan.Hoi.FEEE.SPKT](images/social-networks/feee.png)
+
+----
+
+#### - ***Đoàn TN - Hội SV khoa Công nghệ Hóa học và Thực phẩm***
+  - @DoanHoiFCFT 
+  - [👉Link FB](https://www.facebook.com/DoanHoiFCFT)
+
+![@DoanHoiFCFT](images/social-networks/hoa.png)
