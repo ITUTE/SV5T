@@ -99,18 +99,8 @@ function saveValueToLocalStorage(field, value) {
     localStorage.setItem(field, value);
 }
 
-function showTarget(submitted) {
-    if (submitted) {
-        document.getElementById("hidden_iframe").hidden = false;
-    }
-}
-
 function submitForm() {
-    var btn = document.getElementById("submit");
-    btn.addEventListener('click', (e) => {
-        e.preventDefault;
-        showTarget(true);
-    })
-    btn.click();
-    //location.href="https://www.google.com";
+    window.location.href = "./thanks.html";
+    document.forms[0].submit();
+    return true;
 }
