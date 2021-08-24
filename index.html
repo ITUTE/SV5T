@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="512x501" href="assets/img/logo/logo_SinhVien5Tot.png">
     <link rel="icon" type="image/png" sizes="512x501" href="assets/img/logo/logo_SinhVien5Tot.png">
     <link rel="icon" type="image/png" sizes="512x501" href="assets/img/logo/logo_SinhVien5Tot.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="stylesheet" href="assets/css/Bold-BS4-Footer-Big-Logo.css">
@@ -20,26 +20,27 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body onload="saveLocalStorage(&#39;current&#39;,&#39;thong-tin&#39;);">
+<body id="body" onload="saveValueToLocalStorage(&#39;current&#39;,0);">
     <!-- Start: Paralax Hero Banner -->
     <div class="bg-light border rounded border-light hero-technology jumbotron py-5 px-4" style="height: 22vw;"></div><!-- End: Paralax Hero Banner -->
-    <div class="container">
+    <div id="top"></div>
+    <div class="container" id="content">
         <section>
-            <form>
-                <!-- Start: info -->
-                <div class="row" id="thong-tin">
+            <form method="post" target="_blank" action="https://docs.google.com/forms/u/4/d/e/1FAIpQLSc40gh45qkU1pn1QutUI--0IleXZqGYZqgdOnLhwEg22W1hhA/formResponse">
+                <div class="progress" id="progressbar" style="margin: 3vw 10vw;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" aria-valuenow="12.5" aria-valuemin="0" aria-valuemax="100" id="progress" style="width: 12.5%;">12.5%</div>
+                </div>
+                <div class="alert alert-warning alert-dismissible" role="alert" id="alert" hidden=""><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button><span><strong>Vui lòng kiểm tra lại các thông tin đã nhập thật kỹ trước khi gửi!</strong></span></div><!-- Start: info -->
+                <div class="row" id="thong-tin" style="background: rgba(245,240,230,0.3);margin: 30px auto;padding: 30px 20px;">
                     <div class="col">
-                        <div class="progress" style="margin-right: 10vw;margin-left: 10vw;margin-top: 5vw;margin-bottom: 2vw;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" aria-valuenow="12.5" aria-valuemin="0" aria-valuemax="100" style="width: 12.5%;"><span class="visually-hidden">12.5%</span></div>
-                        </div>
                         <h3 class="text-center text-primary" style="margin-top: 20px;margin-bottom: 20px;"><strong>THÔNG TIN CÁ NHÂN</strong></h3>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">Họ tên:</legend><input class="form-control" type="text" id="ho-ten" autocomplete="on" required="" onblur="saveLocalStorage(&#39;ho-ten&#39;);" placeholder="VD: Nguyễn Văn A" name="ho-ten" onload="loadData(&#39;ho-ten&#39;);">
+                            <legend style="font-size: 16px;font-weight: bold;">Họ tên:</legend><input class="form-control" type="text" id="ho-ten" autocomplete="on" required="" onblur="saveLocalStorage(&#39;ho-ten&#39;);" placeholder="VD: Nguyễn Văn A" name="entry.1652788856" onload="loadData(&#39;ho-ten&#39;);">
                         </fieldset>
                         <div class="row row-cols-2">
                             <div class="col">
                                 <fieldset style="margin: 10px;">
-                                    <legend style="font-size: 16px;font-weight: bold;">Chuyên ngành đào tạo:</legend><select class="form-select" id="chuyen-nganh" required="" onblur="saveLocalStorage(&#39;chuyen-nganh&#39;);" onload="loadData(&#39;chuyen-nganh&#39;);">
+                                    <legend style="font-size: 16px;font-weight: bold;">Chuyên ngành đào tạo:</legend><select class="form-select" id="chuyen-nganh" required="" onblur="saveLocalStorage(&#39;chuyen-nganh&#39;);" onload="loadData(&#39;chuyen-nganh&#39;);" name="entry.70832325">
                                         <option value="Công nghệ Thông tin" selected="">Công nghệ Thông tin</option>
                                         <option value="Kỹ thuật Dữ liệu">Kỹ thuật Dữ liệu</option>
                                     </select>
@@ -47,26 +48,26 @@
                             </div>
                             <div class="col">
                                 <fieldset style="margin: 10px;">
-                                    <legend style="font-size: 16px;font-weight: bold;">Khoa:</legend><input class="form-control" type="text" id="khoa" required="" name="khoa" value="Công nghệ Thông tin" readonly="" onload="saveLocalStorage(&#39;khoa&#39;);">
+                                    <legend style="font-size: 16px;font-weight: bold;">Khoa:</legend><input class="form-control" type="text" id="khoa" required="" name="entry.929709376" value="Công nghệ Thông tin" readonly="" onload="saveLocalStorage(&#39;khoa&#39;);">
                                 </fieldset>
                             </div>
                         </div>
                         <div class="row row-cols-2">
                             <div class="col">
                                 <fieldset style="margin: 10px;">
-                                    <legend style="font-size: 16px;font-weight: bold;">MSSV:</legend><input class="form-control" type="number" id="mssv" required="" name="mssv" placeholder="VD: 1811001" onblur="saveLocalStorage(&#39;mssv&#39;);" onload="loadData(&#39;mssv&#39;);">
+                                    <legend style="font-size: 16px;font-weight: bold;">MSSV:</legend><input class="form-control" type="number" id="mssv" required="" name="entry.1277482693" placeholder="VD: 1811001" onblur="saveLocalStorage(&#39;mssv&#39;);" onload="loadData(&#39;mssv&#39;);">
                                 </fieldset>
                             </div>
                             <div class="col">
                                 <fieldset style="margin: 10px;">
-                                    <legend style="font-size: 16px;font-weight: bold;">Lớp:</legend><input class="form-control" type="text" id="lop" name="lop" placeholder="VD: 1811ST1" onblur="saveLocalStorage(&#39;lop&#39;);" onload="loadData(&#39;lop&#39;);">
+                                    <legend style="font-size: 16px;font-weight: bold;">Lớp:</legend><input class="form-control" type="text" id="lop" name="entry.913248386" placeholder="VD: 1811ST1" onblur="saveLocalStorage(&#39;lop&#39;);" onload="loadData(&#39;lop&#39;);">
                                 </fieldset>
                             </div>
                         </div>
                         <div class="row row-cols-2">
                             <div class="col">
                                 <fieldset style="margin: 10px;">
-                                    <legend style="font-size: 16px;font-weight: bold;">Sinh viên năm:</legend><select class="form-select" id="sv-nam" required="" onblur="saveLocalStorage(&#39;sv-nam&#39;);" name="sv-nam" onload="loadData(&#39;sv-nam&#39;);">
+                                    <legend style="font-size: 16px;font-weight: bold;">Sinh viên năm:</legend><select class="form-select" id="sv-nam" required="" onblur="saveLocalStorage(&#39;sv-nam&#39;);" name="entry.1446801768" onload="loadData(&#39;sv-nam&#39;);">
                                         <option value="1" selected="">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
@@ -80,14 +81,14 @@
                             </div>
                             <div class="col">
                                 <fieldset style="margin: 10px;">
-                                    <legend style="font-size: 16px;font-weight: bold;">Chức vụ:</legend><input class="form-control" type="text" id="chuc-vu" name="chuc-vu" placeholder="VD: Sinh viên" onblur="saveLocalStorage(&#39;chuc-vu&#39;);" onload="loadData(&#39;chuc-vu&#39;);">
+                                    <legend style="font-size: 16px;font-weight: bold;">Chức vụ:</legend><input class="form-control" type="text" id="chuc-vu" name="entry.858499336" placeholder="VD: Sinh viên" onblur="saveLocalStorage(&#39;chuc-vu&#39;);" onload="loadData(&#39;chuc-vu&#39;);">
                                 </fieldset>
                             </div>
                         </div>
                         <div class="row row-cols-2">
                             <div class="col">
                                 <fieldset style="margin: 10px;">
-                                    <legend style="font-size: 16px;font-weight: bold;">Giới tính:</legend><select class="form-select" id="gioi-tinh" required="" onblur="saveLocalStorage(&#39;gioi-tinh&#39;);" name="gioi-tinh" onload="loadData(&#39;gioi-tinh&#39;);">
+                                    <legend style="font-size: 16px;font-weight: bold;">Giới tính:</legend><select class="form-select" id="gioi-tinh" required="" onblur="saveLocalStorage(&#39;gioi-tinh&#39;);" name="entry.601092068" onload="loadData(&#39;gioi-tinh&#39;);">
                                         <option value="Nam" selected="">Nam</option>
                                         <option value="Nữ">Nữ</option>
                                     </select>
@@ -95,279 +96,262 @@
                             </div>
                             <div class="col">
                                 <fieldset style="margin: 10px;">
-                                    <legend style="font-size: 16px;font-weight: bold;">Ngày sinh:</legend><input class="form-control" id="ngay-sinh" type="date" name="ngay-sinh" required="" onblur="saveLocalStorage(&#39;ngay-sinh&#39;);" onload="loadData(&#39;ngay-sinh&#39;);">
+                                    <legend style="font-size: 16px;font-weight: bold;">Ngày sinh:</legend><input class="form-control" id="ngay-sinh" type="date" name="entry.1986662359" required="" onblur="saveLocalStorage(&#39;ngay-sinh&#39;);" onload="loadData(&#39;ngay-sinh&#39;);">
                                 </fieldset>
                             </div>
                             <div class="col">
                                 <fieldset style="margin: 10px;">
-                                    <legend style="font-size: 16px;font-weight: bold;">Dân tộc:</legend><input class="form-control" type="text" id="dan-toc" required="" name="dan-toc" onload="loadData(&#39;dan-toc&#39;);" onblur="saveLocalStorage(&#39;dan-toc&#39;);">
-                                </fieldset>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <fieldset style="margin: 10px;">
-                                    <legend style="font-size: 16px;font-weight: bold;margin-bottom: 0px;">Ngày vào Đảng :</legend><span style="font-size: 14px;"><em>(dự bị)</em></span><input class="form-control" id="vao-dang-du-bi" type="date" name="vao-dang-du-bi" onload="loadData(&#39;vao-dang-du-bi&#39;);" onblur="saveLocalStorage(&#39;vao-dang-du-bi&#39;);" required="">
-                                </fieldset>
-                            </div>
-                            <div class="col">
-                                <fieldset style="margin: 10px;">
-                                    <legend style="font-size: 16px;font-weight: bold;margin-bottom: 0px;">Ngày vào Đảng :</legend><span style="font-size: 13px;"><em>(chính thức)</em></span><input class="form-control" id="vao-dang-chinh-thuc" type="date" name="vao-dang-chinh-thuc" onblur="saveLocalStorage(&#39;vao-dang-chinh-thuc&#39;);" onload="loadData(&#39;vao-dang-chinh-thuc&#39;);" required="">
-                                </fieldset>
-                            </div>
-                            <div class="col">
-                                <fieldset style="margin: 10px;">
-                                    <legend style="font-size: 16px;font-weight: bold;margin-bottom: 0px;">Ngày vào Đoàn:</legend><span style="font-size: 13px;"><em>&nbsp;</em><br></span><input class="form-control" id="vao-doan" type="date" name="vao-doan" required="" onload="loadData(&#39;vao-doan&#39;);" onblur="saveLocalStorage(&#39;vao-doan&#39;);">
+                                    <legend style="font-size: 16px;font-weight: bold;">Dân tộc:</legend><input class="form-control" type="text" id="dan-toc" required="" name="entry.1855757618" onload="loadData(&#39;dan-toc&#39;);" onblur="saveLocalStorage(&#39;dan-toc&#39;);">
                                 </fieldset>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 <fieldset style="margin: 10px;">
-                                    <legend style="font-size: 16px;font-weight: bold;">SĐT:</legend><input class="form-control" type="tel" id="sdt" required="" inputmode="tel" autocomplete="on" name="sdt" onblur="saveLocalStorage(&#39;sdt&#39;);" onload="loadData(&#39;sdt&#39;);">
+                                    <legend style="font-size: 16px;font-weight: bold;margin-bottom: 0px;">Ngày vào Đảng :</legend><span style="font-size: 14px;"><em>(dự bị)</em></span><input class="form-control" id="vao-dang-du-bi" type="date" name="entry.2066982634" onload="loadData(&#39;vao-dang-du-bi&#39;);" onblur="saveLocalStorage(&#39;vao-dang-du-bi&#39;);" value="Không.">
                                 </fieldset>
                             </div>
                             <div class="col">
                                 <fieldset style="margin: 10px;">
-                                    <legend style="font-size: 16px;font-weight: bold;">Email:</legend><input class="form-control" type="email" id="email" autocomplete="on" inputmode="email" required="" onload="loadData(&#39;email);" onblur="saveLocalStorage(&#39;email&#39;);" name="email" placeholder="VD: 1811001@student.hcmute.edu.vn">
+                                    <legend style="font-size: 16px;font-weight: bold;margin-bottom: 0px;">Ngày vào Đảng :</legend><span style="font-size: 13px;"><em>(chính thức)</em></span><input class="form-control" id="vao-dang-chinh-thuc" type="date" name="entry.2090092961" onblur="saveLocalStorage(&#39;vao-dang-chinh-thuc&#39;);" onload="loadData(&#39;vao-dang-chinh-thuc&#39;);" value="Không.">
                                 </fieldset>
                             </div>
                             <div class="col">
                                 <fieldset style="margin: 10px;">
-                                    <legend style="font-size: 16px;font-weight: bold;">Facebook:</legend><input class="form-control" type="url" id="facebook" name="facebook" placeholder="VD: https://www.facebook.com/username" required="" autocomplete="on" onload="loadData(&#39;facebook&#39;);" onblur="saveLocalStorage(&#39;facebook&#39;);">
+                                    <legend style="font-size: 16px;font-weight: bold;margin-bottom: 0px;">Ngày vào Đoàn:</legend><span style="font-size: 13px;"><em>&nbsp;</em><br></span><input class="form-control" id="vao-doan" type="date" name="entry.2059850035" required="" onload="loadData(&#39;vao-doan&#39;);" onblur="saveLocalStorage(&#39;vao-doan&#39;);">
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <fieldset style="margin: 10px;">
+                                    <legend style="font-size: 16px;font-weight: bold;">SĐT:</legend><input class="form-control" type="tel" id="sdt" required="" inputmode="tel" autocomplete="on" name="entry.1052416036" onblur="saveLocalStorage(&#39;sdt&#39;);" onload="loadData(&#39;sdt&#39;);">
+                                </fieldset>
+                            </div>
+                            <div class="col">
+                                <fieldset style="margin: 10px;">
+                                    <legend style="font-size: 16px;font-weight: bold;">Email:</legend><input class="form-control" type="email" id="email" autocomplete="on" inputmode="email" required="" onload="loadData(&#39;email);" onblur="saveLocalStorage(&#39;email&#39;);" name="entry.1560965531" placeholder="VD: 1811001@student.hcmute.edu.vn">
+                                </fieldset>
+                            </div>
+                            <div class="col">
+                                <fieldset style="margin: 10px;">
+                                    <legend style="font-size: 16px;font-weight: bold;">Facebook:</legend><input class="form-control" type="url" id="facebook" name="entry.1440767778" placeholder="VD: https://www.facebook.com/username" required="" autocomplete="on" onload="loadData(&#39;facebook&#39;);" onblur="saveLocalStorage(&#39;facebook&#39;);">
                                 </fieldset>
                             </div>
                         </div>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">Địa chỉ liên lạc:<span style="margin-left: 5px;font-size: 13px;color: var(--bs-secondary);"><em>(Vui lòng ghi cụ thể địa chỉ chỗ ở hiện tại)</em></span></legend><textarea class="form-control" id="dia-chi" wrap="soft" rows="4" name="dia-chi" spellcheck="true" required="" onblur="saveLocalStorage(&#39;dia-chi&#39;);" onload="loadData(&#39;dia-chi&#39;);"></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">Địa chỉ liên lạc:<span style="margin-left: 5px;font-size: 13px;color: var(--bs-secondary);"><em>(Vui lòng ghi cụ thể địa chỉ chỗ ở hiện tại)</em></span></legend><textarea class="form-control" id="dia-chi" wrap="soft" rows="4" name="entry.1971085910" spellcheck="true" required="" onblur="saveLocalStorage(&#39;dia-chi&#39;);" onload="loadData(&#39;dia-chi&#39;);"></textarea>
                         </fieldset>
-                        <div class="btn-group btn-group-sm d-flex d-md-flex justify-content-center justify-content-md-center align-items-md-center" role="group" style="margin: 5vw;"><button class="btn btn-outline-secondary disabled" id="back-1" type="button" disabled=""><strong>Trở lại</strong></button><button class="btn btn-outline-primary" id="next-1" type="button" onclick="nextPart();"><strong>Tiếp tục</strong></button></div>
                     </div>
                 </div><!-- End: info -->
                 <!-- Start: ddt -->
-                <div class="row" id="dao-duc-tot" hidden="">
+                <div class="row" id="dao-duc-tot" hidden="" style="background: rgba(245,240,230,0.3);margin: 30px auto;padding: 30px 20px;">
                     <div class="col">
-                        <div class="progress" style="margin-right: 10vw;margin-left: 10vw;margin-top: 5vw;margin-bottom: 2vw;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%;"><span class="visually-hidden">25%</span></div>
-                        </div>
                         <h3 class="text-center text-primary" style="margin-top: 20px;margin-bottom: 20px;"><strong>ĐẠO ĐỨC TỐT</strong></h3>
                         <h5 class="text-black-50" style="margin-top: 20px;"><strong># Tiêu chuẩn bắt buộc</strong></h5>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">1. Điểm rèn luyện:</legend><span><em>Điểm rèn luyện trung bình của năm học 2020 - 2021.</em></span><input class="form-control" type="text" id="ddt-1" autocomplete="on" required="" onload="loadData(&#39;ddt-1&#39;);" onblur="saveLocalStorage(&#39;ddt-1&#39;);" name="ddt-1" placeholder="VD: 95.0">
+                            <legend style="font-size: 16px;font-weight: bold;">1. Điểm rèn luyện:</legend><span><em>Điểm rèn luyện trung bình của năm học 2020 - 2021.</em></span><input class="form-control" type="text" id="ddt-1" autocomplete="on" required="" onload="loadData(&#39;ddt-1&#39;);" onblur="saveLocalStorage(&#39;ddt-1&#39;);" name="entry.1434671378" placeholder="VD: 95.0">
                         </fieldset>
                         <h5 class="text-black-50" style="margin-top: 20px;"><strong># Tiêu chuẩn khác</strong></h5>
                         <fieldset style="margin: 10px;">
                             <legend style="font-size: 16px;font-weight: bold;">2.1. Điểm trung bình các môn chính trị tư tưởng học trong năm học:<br></legend>
-                            <p style="margin-bottom: 0px;font-size: 15px;"><strong><em>Các môn chính trị tư tưởng bao gồm:</em></strong><br><em>- Khóa K18 về trước:</em> Pháp luật đại cương, Những nguyên lý cơ bản của chủ nghĩa Mác - Leenin, Tư tưởng Hồ Chí Minh, Đường lối Đảng Cộng sản Việt Nam.<br><em>- Khóa K19, K20:</em> Pháp luật đại cương, Kinh tế chính trị Mác - Lenein, Triết học Mác - Leenin, Chủ nghĩa xã hội khoa học, Tư tưởng Hồ Chí Minh, Lịch sử Đảng Cộng sản Việt Nam.<br><br>Nếu không có, vui lòng điền "<strong>Không</strong>".</p><input class="form-control" type="text" id="ddt-201" autocomplete="on" required="" name="ddt-201" onload="loadData(&#39;ddt-201&#39;);" onblur="saveLocalStorage(&#39;ddt-201&#39;);" placeholder="VD: Không.">
+                            <p style="margin-bottom: 0px;font-size: 15px;"><strong><em>Các môn chính trị tư tưởng bao gồm:</em></strong><br><em>- Khóa K18 về trước:</em> Pháp luật đại cương, Những nguyên lý cơ bản của chủ nghĩa Mác - Leenin, Tư tưởng Hồ Chí Minh, Đường lối Đảng Cộng sản Việt Nam.<br><em>- Khóa K19, K20:</em> Pháp luật đại cương, Kinh tế chính trị Mác - Lenein, Triết học Mác - Leenin, Chủ nghĩa xã hội khoa học, Tư tưởng Hồ Chí Minh, Lịch sử Đảng Cộng sản Việt Nam.<br><br>Nếu không có, vui lòng điền "<strong>Không</strong>".</p><input class="form-control" type="text" id="ddt-201" autocomplete="on" required="" name="entry.1877753253" onload="loadData(&#39;ddt-201&#39;);" onblur="saveLocalStorage(&#39;ddt-201&#39;);" placeholder="VD: Không.">
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.2. Thành viên chính thức đội thi tìm hiểu về chủ nghĩa Mác - Lênin, tư tưởng Hồ Chí Minh từ cấp trường trở lên:<br></legend><textarea class="form-control" id="ddt-202" rows="4" name="ddt-202" spellcheck="true" wrap="soft" required="" onload="loadData(&#39;ddt-202&#39;);" onblur="saveLocalStorage(&#39;ddt-202&#39;);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.2. Thành viên chính thức đội thi tìm hiểu về chủ nghĩa Mác - Lênin, tư tưởng Hồ Chí Minh từ cấp trường trở lên:<br></legend><textarea class="form-control" id="ddt-202" rows="4" name="entry.1893064868" spellcheck="true" wrap="soft" required="" onload="loadData(&#39;ddt-202&#39;);" onblur="saveLocalStorage(&#39;ddt-202&#39;);" placeholder="VD: Không."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.3. Có tham luận, bài viết được trình bày tại các diễn đàn học thuật về các môn khoa học Mác - Lênin, tư tưởng Hồ Chí Minh từ cấp trường trở lên:<br></legend><span><br><em>Ghi rõ tên tham luận, diễn đàn nào, cấp tổ chức, thời gian tổ chức.</em><br></span><textarea class="form-control" id="ddt-203" required="" wrap="soft" spellcheck="true" name="ddt-203" rows="4" onload="loadData(&#39;ddt-203&#39;);" onblur="saveLocalStorage(&#39;ddt-203&#39;);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.3. Có tham luận, bài viết ��ược trình bày tại các diễn đàn học thuật về các môn khoa học Mác - Lênin, tư tưởng Hồ Chí Minh từ cấp trường trở lên:<br></legend><span><br><em>Ghi rõ tên tham luận, diễn đàn nào, cấp tổ chức, thời gian tổ chức.</em><br></span><textarea class="form-control" id="ddt-203" required="" wrap="soft" spellcheck="true" name="entry.162677860" rows="4" onload="loadData(&#39;ddt-203&#39;);" onblur="saveLocalStorage(&#39;ddt-203&#39;);" placeholder="VD: Không."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.4. Là Thanh niên tiên tiến làm theo lời Bác các cấp hoặc là điển hình được biểu dương trong việc thực hiện học tập và làm theo tư tưởng, tấm gương đạo đức, phong cách Chủ tịch Hồ Chí Minh:<br></legend><span><br><em>Ghi rõ danh hiệu, cấp tổ chức và thời gian tuyên dương.</em><br></span><textarea class="form-control" id="ddt-204" rows="4" name="ddt-204" spellcheck="true" wrap="soft" required="" onload="loadData(&#39;ddt-204&#39;);" onblur="saveLocalStorage(&#39;ddt-204&#39;);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.4. Là Thanh niên tiên tiến làm theo lời Bác các cấp hoặc là điển hình được biểu dương trong việc thực hiện học tập và làm theo tư tưởng, tấm gương đạo đức, phong cách Chủ tịch Hồ Chí Minh:<br></legend><span><br><em>Ghi rõ danh hiệu, cấp tổ chức và thời gian tuyên dương.</em><br></span><textarea class="form-control" id="ddt-204" rows="4" name="entry.1242633026" spellcheck="true" wrap="soft" required="" onload="loadData(&#39;ddt-204&#39;);" onblur="saveLocalStorage(&#39;ddt-204&#39;);" placeholder="VD: Không."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.5. Là thanh niên/ sinh viên tiêu biểu trong các lĩnh vực, gương người tốt, việc tốt, có hành động dũng cảm cứu người được các cấp ghi nhận, biểu dương, khen thưởng hoặc nêu gương qua các phương tiên thông tin đại chúng:<br></legend><span><br><em>Ghi rõ danh hiệu, cấp tổ chức và thời gian tuyên dương.</em><br></span><textarea class="form-control" id="ddt-205" rows="4" required="" name="ddt-205" onload="loadData(&#39;ddt-205&#39;);" onblur="saveLocalStorage(&#39;ddt-205&#39;);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.5. Là thanh niên/ sinh viên tiêu biểu trong các lĩnh vực, gương người tốt, việc tốt, có hành động dũng cảm cứu người được các cấp ghi nhận, biểu dương, khen thưởng hoặc nêu gương qua các phương tiên thông tin đại chúng:<br></legend><span><br><em>Ghi rõ danh hiệu, cấp tổ chức và thời gian tuyên dương.</em><br></span><textarea class="form-control" id="ddt-205" rows="4" required="" name="entry.1011667673" onload="loadData(&#39;ddt-205&#39;);" onblur="saveLocalStorage(&#39;ddt-205&#39;);" placeholder="VD: Không."></textarea>
                         </fieldset>
-                        <div class="btn-group btn-group-sm d-flex d-md-flex justify-content-center justify-content-md-center align-items-md-center" role="group" style="margin: 05vw;"><button class="btn btn-outline-secondary" id="back-2" type="button" onclick="prePart();"><strong>Trở lại</strong></button><button class="btn btn-outline-primary" id="next-2" type="button" onclick="nextPart();"><strong>Tiếp tục</strong></button></div>
                     </div>
                 </div><!-- End: ddt -->
                 <!-- Start: htt -->
-                <div class="row" id="hoc-tap-tot" hidden="">
+                <div class="row" id="hoc-tap-tot" hidden="" style="background: rgba(245,240,230,0.3);margin: 30px auto;padding: 30px 20px;">
                     <div class="col">
-                        <div class="progress" style="margin-right: 10vw;margin-left: 10vw;margin-top: 5vw;margin-bottom: 2vw;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" aria-valuenow="37.5" aria-valuemin="0" aria-valuemax="100" style="width: 37.5%;"><span class="visually-hidden">37.5%</span></div>
-                        </div>
                         <h3 class="text-center text-primary" style="margin-top: 20px;margin-bottom: 20px;"><strong>HỌC TẬP TỐT</strong></h3>
                         <h5 class="text-black-50" style="margin-top: 20px;"><strong># Tiêu chuẩn bắt buộc</strong></h5>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">1.1. Điểm trung bình chung học tập năm học 2020 - 2021:<br></legend><span><em>Lấy đến 2 chữ số sau dấu chấm thập phân.</em><br></span><input class="form-control" type="text" id="htt-101" autocomplete="on" required="" name="htt-101" placeholder="VD: 8.00" onload="loadData(&#39;htt-101&#39;);" onblur="saveLocalStorage(&#39;htt-101&#39;);">
+                            <legend style="font-size: 16px;font-weight: bold;">1.1. Điểm trung bình chung học tập năm học 2020 - 2021:<br></legend><span><em>Lấy đến 2 chữ số sau dấu chấm thập phân.</em><br></span><input class="form-control" type="text" id="htt-101" autocomplete="on" required="" name="entry.1877820815" placeholder="VD: 8.00" onload="loadData(&#39;htt-101&#39;);" onblur="saveLocalStorage(&#39;htt-101&#39;);">
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">1.2. Tham gia đóng góp ý tưởng sáng tạo trên Cổng thông tin ý tưởng sáng tạo Thành phố Hồ Chí Minh:<br></legend><span><br><em>Vui lòng ghi rõ tên ý tưởng, thời gian đóng góp. Nếu chưa có, vui lòng xem hướng dẫn&nbsp;</em><a href="https://itute.tiny.us/HD-YTST-2021" target="_blank">tại đây</a><em> và gửi ý tưởng lên </em><strong><em>Cổng thông tin ý tưởng sáng tạo TPHCM</em></strong><em>&nbsp;</em><a href="http://2020.ytuongsangtaohcm.vn/" target="_blank">tại đây</a><em>.</em><br></span><textarea class="form-control" id="htt-102" rows="4" required="" name="htt-102" onload="loadData(&#39;htt-102&#39;);" onblur="saveLocalStorage(&#39;htt-102&#39;);" spellcheck="true" wrap="soft">VD: </textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">1.2. Tham gia đóng góp ý tưởng sáng tạo trên Cổng thông tin ý tưởng sáng tạo Thành phố Hồ Chí Minh:<br></legend><span><br><em>Vui lòng ghi rõ tên ý tưởng, thời gian đóng góp. Nếu chưa có, vui lòng xem hướng dẫn&nbsp;</em><a href="https://itute.tiny.us/HD-YTST-2021" target="_blank">tại đây</a><em> và gửi ý tưởng lên </em><strong><em>Cổng thông tin ý tưởng sáng tạo TPHCM</em></strong><em>&nbsp;</em><a href="http://2020.ytuongsangtaohcm.vn/" target="_blank">tại đây</a><em>.</em><br></span><textarea class="form-control" id="htt-102" rows="4" required="" name="entry.390261048" onload="loadData(&#39;htt-102&#39;);" onblur="saveLocalStorage(&#39;htt-102&#39;);" spellcheck="true" wrap="soft">VD: </textarea>
                         </fieldset>
                         <h5 class="text-black-50" style="margin-top: 20px;"><strong># Tiêu chuẩn khác</strong></h5>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.1. Tham gia dự thi hoặc tổ chức ít nhất 01 cuộc thi học thuật các cấp (từ cấp LCH trở lên và tương đương):<br></legend><span><br><em>Ghi rõ tên chương trình, đơn vị tổ chức, xếp hạng, giải thưởng đạt được, vai trò tham gia.</em><br></span><textarea class="form-control" id="htt-201" rows="4" required="" name="htt-201" onload="loadData(&#39;htt-201&#39;);" onblur="saveLocalStorage(&#39;htt-201&#39;);" spellcheck="true" wrap="soft" placeholder="VD: BTC cuộc thi học thuật Hackathon 2020, khoa Công nghệ Thông tin."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.1. Tham gia dự thi hoặc tổ chức ít nhất 01 cuộc thi học thuật các cấp (từ cấp LCH trở lên và tương đương):<br></legend><span><br><em>Ghi rõ tên chương trình, đơn vị tổ chức, xếp hạng, giải thưởng đạt được, vai trò tham gia.</em><br></span><textarea class="form-control" id="htt-201" rows="4" required="" name="entry.973604671" onload="loadData(&#39;htt-201&#39;);" onblur="saveLocalStorage(&#39;htt-201&#39;);" spellcheck="true" wrap="soft" placeholder="VD: BTC cuộc thi học thuật Hackathon 2020, khoa Công nghệ Thông tin."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2. 2. Tham gia dự thi hoặc tổ chức ít nhất 01 chương trình liên quan tới sáng tạo và NCKH (từ cấp LCH trở lên và tương đương):<br></legend><span><br><em>Ghi rõ tên chương trình, đơn vị tổ chức, xếp hạng, giải thưởng đạt được, vai trò tham gia.</em><br></span><textarea class="form-control" id="htt-202" name="htt-202" spellcheck="true" wrap="soft" required="" onload="loadData(&#39;htt-202&#39;);" onblur="saveLocalStorage(&#39;htt-202&#39;);" rows="4" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.2. Tham gia dự thi hoặc tổ chức ít nhất 01 chương trình liên quan tới sáng tạo và NCKH (từ cấp LCH trở lên và tương đương):<br></legend><span><br><em>Ghi rõ tên chương trình, đơn vị tổ chức, xếp hạng, giải thưởng đạt được, vai trò tham gia.</em><br></span><textarea class="form-control" id="htt-202" name="entry.158559375" spellcheck="true" wrap="soft" required="" onload="loadData(&#39;htt-202&#39;);" onblur="saveLocalStorage(&#39;htt-202&#39;);" rows="4" placeholder="VD: Không."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.3. Tham gia hội thảo, các buổi tọa đàm về sáng tạo, NCKH hoặc nội dung liên quan với vai trò người báo cáo, người chia sẻ hoặc có giấy chứng nhận tham gia của BGH Nhà trường:<br></legend><span><br><em>Ghi rõ tên chương trình, đơn vị tổ chức, xếp hạng, giải thưởng đạt được, vai trò tham gia.</em><br></span><textarea class="form-control" id="htt-203" rows="4" name="htt-203" required="" wrap="soft" spellcheck="true" onload="loadData(&#39;htt-203&#39;);" onblur="saveLocalStorage(&#39;htt-203&#39;);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.3. Tham gia hội thảo, các buổi tọa đàm về sáng tạo, NCKH hoặc nội dung liên quan với vai trò người báo cáo, người chia sẻ hoặc có giấy chứng nhận tham gia của BGH Nhà trường:<br></legend><span><br><em>Ghi rõ tên chương trình, đơn vị tổ chức, xếp hạng, giải thưởng đạt được, vai trò tham gia.</em><br></span><textarea class="form-control" id="htt-203" rows="4" name="entry.1117099259" required="" wrap="soft" spellcheck="true" onload="loadData(&#39;htt-203&#39;);" onblur="saveLocalStorage(&#39;htt-203&#39;);" placeholder="VD: Không."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.4. Tham gia và có giấy chứng nhận các chương trình, cuộc thi do các công ty, tập đoàn tổ chức hoặc các chương trình tương đương:<br></legend><span><br><em>Ghi rõ tên chương trình/ cuộc thi, đơn vị tổ chức, thời gian chứng nhận.</em><br></span><textarea class="form-control" id="htt-204" name="htt-204" required="" wrap="soft" spellcheck="true" rows="4" onload="loadData(&#39;htt-204&#39;);" onblur="saveLocalStorage(&#39;htt-204&#39;);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.4. Tham gia và có giấy chứng nhận các chương trình, cuộc thi do các công ty, tập đoàn tổ chức hoặc các chương trình tương đương:<br></legend><span><br><em>Ghi rõ tên chương trình/ cuộc thi, đơn vị tổ chức, thời gian chứng nhận.</em><br></span><textarea class="form-control" id="htt-204" name="entry.1111481127" required="" wrap="soft" spellcheck="true" rows="4" onload="loadData(&#39;htt-204&#39;);" onblur="saveLocalStorage(&#39;htt-204&#39;);" placeholder="VD: Không."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.5. Tham gia sinh hoạt định kỳ tại các CLB học thuật của từ cấp LCH trở lên và tương đương:<br></legend><span><br><em>Có giấy xác nhận của BCH LCH (hoặc chủ nhiệm CLB) hoặc được cộng điểm trong bảng điểm rèn luyện.</em><br></span><textarea class="form-control" id="htt-205" rows="4" name="htt-205" required="" wrap="soft" spellcheck="true" onload="loadData(&#39;htt-205&#39;);" onblur="saveLocalStorage(&#39;htt-205&#39;);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.5. Tham gia sinh hoạt định kỳ tại các CLB học thuật của từ cấp LCH trở lên và tương đương:<br></legend><span><br><em>Có giấy xác nhận của BCH LCH (hoặc chủ nhiệm CLB) hoặc được cộng điểm trong bảng điểm rèn luyện.</em><br></span><textarea class="form-control" id="htt-205" rows="4" name="entry.97495054" required="" wrap="soft" spellcheck="true" onload="loadData(&#39;htt-205&#39;);" onblur="saveLocalStorage(&#39;htt-205&#39;);" placeholder="VD: Không."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.6. Là chủ nhiệm, Phó Chủ nhiệm, thành viên tiêu biểu của CLB học thuật cấp khoa trở lên:<br></legend><span><br><em>Ghi rõ tên CLB, chức vụ đảm nhận.</em><br></span><textarea class="form-control" id="htt-206" name="htt-206" required="" rows="4" spellcheck="true" wrap="soft" onload="loadData(&#39;htt-206&#39;);" onblur="saveLocalStorage(&#39;htt-206&#39;);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.6. Là chủ nhiệm, Phó Chủ nhiệm, thành viên tiêu biểu của CLB học thuật cấp khoa trở lên:<br></legend><span><br><em>Ghi rõ tên CLB, chức vụ đảm nhận.</em><br></span><textarea class="form-control" id="htt-206" name="entry.728426166" required="" rows="4" spellcheck="true" wrap="soft" onload="loadData(&#39;htt-206&#39;);" onblur="saveLocalStorage(&#39;htt-206&#39;);" placeholder="VD: Không."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.7. Tham gia đề tài NCKH cấp trường với tư cách là chủ nhiệm đề tài hoặc đồng tác giả của đề tài hoặc thành viên nhóm nghiên cứu đề tài:<br></legend><span><br><em>Ghi rõ tên đề tài, cấp, vai trò, điểm đánh giá, xếp loại, giải thưởng.&nbsp;Chỉ chấp nhận các đề tài trong&nbsp;</em><strong><em>Danh mục chính thức đề tài nghiên cứu khoa học sinh viên năm 2021</em></strong><em>&nbsp;xem&nbsp;</em><a href="https://itute.tiny.us/DS-NCKH-20-21" target="_blank"><em>tại đây</em></a><em>.</em><br></span><textarea class="form-control" id="htt-207" name="htt-207" required="" wrap="soft" spellcheck="true" onload="loadData(&#39;htt-207&#39;);" onblur="saveLocalStorage(&#39;htt-207&#39;);" placeholder="VD: Không." rows="4"></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.7. Tham gia đề tài NCKH cấp trường với tư cách là chủ nhiệm đề tài hoặc đồng tác giả của đề tài hoặc thành viên nhóm nghiên cứu đề tài:<br></legend><span><br><em>Ghi rõ tên đề tài, cấp, vai trò, điểm đánh giá, xếp loại, giải thưởng.&nbsp;Chỉ chấp nhận các đề tài trong&nbsp;</em><strong><em>Danh mục chính thức đề tài nghiên cứu khoa học sinh viên năm 2021</em></strong><em>&nbsp;xem&nbsp;</em><a href="https://itute.tiny.us/DS-NCKH-20-21" target="_blank"><em>tại đây</em></a><em>.</em><br></span><textarea class="form-control" id="htt-207" name="entry.1945273912" required="" wrap="soft" spellcheck="true" onload="loadData(&#39;htt-207&#39;);" onblur="saveLocalStorage(&#39;htt-207&#39;);" placeholder="VD: Không." rows="4"></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
                             <legend style="font-size: 16px;font-weight: bold;">2.8. Có bài viết về lĩnh vực chuyên môn đang theo học, đăng tải trên các sản phẩm của các cơ quan truyền thông uy tín hoặc các báo, tạp chí khoa học chuyên ngành (được bảo trợ nội dung bởi các cơ quan chuyên môn) hoặc có bài tham luận tham gia các hội thảo khoa học cấp trường trở lên:<br></legend>
-                            <p style="margin: 0px;"><strong><em>- Nếu là bài viết:</em></strong><em>&nbsp;ghi rõ tên bài viết, tên - số báo, tên - số tạp chí, ngày phát hành.</em><br><strong><em>- Nếu là bài tham luận tham gia các hội thảo khoa học: </em></strong><em>ghi rõ tên tham luận, tên hội thảo, cấp, thời gian tổ chức.</em><br></p><textarea class="form-control" id="htt-208" name="htt-208" rows="4" required="" wrap="soft" spellcheck="true" placeholder="VD: Không." onload="loadData(&#39;htt-208&#39;);" onblur="saveLocalStorage(&#39;htt-208&#39;);"></textarea>
+                            <p style="margin: 0px;"><strong><em>- Nếu là bài viết:</em></strong><em>&nbsp;ghi rõ tên bài viết, tên - số báo, tên - số tạp chí, ngày phát hành.</em><br><strong><em>- Nếu là bài tham luận tham gia các hội thảo khoa học: </em></strong><em>ghi rõ tên tham luận, tên hội thảo, cấp, thời gian tổ chức.</em><br></p><textarea class="form-control" id="htt-208" name="entry.760931818" rows="4" required="" wrap="soft" spellcheck="true" placeholder="VD: Không." onload="loadData(&#39;htt-208&#39;);" onblur="saveLocalStorage(&#39;htt-208&#39;);"></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.9. Có sản phẩm sáng tạo được cấp bằng sáng chế, cấp giấy phép xuất bản hoặc đạt các giải thưởng từ cấp tỉnh, thành phố trở lên:<br></legend><span><br><em>Ghi rõ tên sản phẩm, đơn vị chứng nhận, giải thưởng đạt được, cấp nào.</em><br></span><textarea class="form-control" id="htt-209" name="htt-209" required="" rows="4" placeholder="VD: Không." wrap="soft" spellcheck="true" onload="loadData(&#39;htt-209&#39;);" onblur="saveLocalStorage(&#39;htt-209&#39;);"></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.9. Có sản phẩm sáng tạo được cấp bằng sáng chế, cấp giấy phép xuất bản hoặc đạt các giải thưởng từ cấp tỉnh, thành phố trở lên:<br></legend><span><br><em>Ghi rõ tên sản phẩm, đơn vị chứng nhận, giải thưởng đạt được, cấp nào.</em><br></span><textarea class="form-control" id="htt-209" name="entry.1818816523" required="" rows="4" placeholder="VD: Không." wrap="soft" spellcheck="true" onload="loadData(&#39;htt-209&#39;);" onblur="saveLocalStorage(&#39;htt-209&#39;);"></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.10. Là thành viên đội tuyển tham gia các cuộc thi học thuật cấp quốc gia, quốc tế:<br></legend><span><br><em>Ghi rõ tên cuộc thi, đơn vị tổ chức, xếp hạng, giải thưởng.</em><br></span><textarea class="form-control" id="htt-210" name="htt-210" required="" rows="4" spellcheck="true" wrap="soft" onload="loadData(&#39;htt-210&#39;);" onblur="saveLocalStorage(&#39;htt-210&#39;);" placeholder="VD: Thành viên đội tuyển tham gia dự thi cuộc thi học thuật &quot;Sinh viên với An toàn thông tin ASEAN 2020&quot;."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.10. Là thành viên đội tuyển tham gia các cuộc thi học thuật cấp quốc gia, quốc tế:<br></legend><span><br><em>Ghi rõ tên cuộc thi, đơn vị tổ chức, xếp hạng, giải thưởng.</em><br></span><textarea class="form-control" id="htt-210" name="entry.1619493656" required="" rows="4" spellcheck="true" wrap="soft" onload="loadData(&#39;htt-210&#39;);" onblur="saveLocalStorage(&#39;htt-210&#39;);" placeholder="VD: Thành viên đội tuyển tham gia dự thi cuộc thi học thuật &quot;Sinh viên với An toàn thông tin ASEAN 2020&quot;."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.11. Đạt giải thưởng trong các cuộc thi ý tưởng sáng tạo từ cấp thành phố trở lên:<br></legend><span><br><em>Ghi rõ tên cuộc thi, đơn vị tổ chức, xếp loại, xếp hạng, giải thưởng đạt được.</em><br></span><textarea class="form-control" id="htt-211" name="htt-211" required="" wrap="soft" rows="4" spellcheck="true" onload="loadData(&#39;htt-211&#39;);" onblur="saveLocalStorage(&#39;htt-211&#39;);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.11. Đạt giải thưởng trong các cuộc thi ý tưởng sáng tạo từ cấp thành phố trở lên:<br></legend><span><br><em>Ghi rõ tên cuộc thi, đơn vị tổ chức, xếp loại, xếp hạng, giải thưởng đạt được.</em><br></span><textarea class="form-control" id="htt-211" name="entry.1678227639" required="" wrap="soft" rows="4" spellcheck="true" onload="loadData(&#39;htt-211&#39;);" onblur="saveLocalStorage(&#39;htt-211&#39;);" placeholder="VD: Không."></textarea>
                         </fieldset>
-                        <div class="btn-group btn-group-sm d-flex d-md-flex justify-content-center justify-content-md-center align-items-md-center" role="group" style="margin: 05vw;"><button class="btn btn-outline-secondary" id="back-3" type="button" onclick="prePart();"><strong>Trở lại</strong></button><button class="btn btn-outline-primary" id="next-3" type="button" onclick="nextPart();"><strong>Tiếp tục</strong></button></div>
                     </div>
                 </div><!-- End: htt -->
                 <!-- Start: tlt -->
-                <div class="row" id="the-luc-tot" hidden="">
+                <div class="row" id="the-luc-tot" hidden="" style="background: rgba(245,240,230,0.3);margin: 30px auto;padding: 30px 20px;">
                     <div class="col">
-                        <div class="progress" style="margin-right: 10vw;margin-left: 10vw;margin-top: 5vw;margin-bottom: 2vw;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"><span class="visually-hidden">50%</span></div>
-                        </div>
                         <h3 class="text-center text-primary" style="margin-top: 20px;margin-bottom: 20px;"><strong>THỂ LỰC TỐT</strong></h3>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">1. Đạt danh hiệu Thanh niên khỏe từ cấp trường trở lên:<br></legend><span><em>Ghi rõ thời gian nhận chứng nhận. Nếu không có, vui lòng ghi "</em><strong><em>Không.</em></strong><em>"</em></span><textarea class="form-control" id="tlt-1" name="tlt-1" required="" wrap="soft" spellcheck="true" rows="4" onload="loadData(&#39;tlt-1&#39;);" onblur="saveLocalStorage(&#39;tlt-1&#39;);" placeholder="VD: Đạt danh hiệu Thanh niên khỏe cấp trường lần 2 năm 2020."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">1. Đạt danh hiệu Thanh niên khỏe từ cấp trường trở lên:<br></legend><span><em>Ghi rõ thời gian nhận chứng nhận. Nếu không có, vui lòng ghi "</em><strong><em>Không.</em></strong><em>"</em></span><textarea class="form-control" id="tlt-1" name="entry.546438142" required="" wrap="soft" spellcheck="true" rows="4" onload="loadData(&#39;tlt-1&#39;);" onblur="saveLocalStorage(&#39;tlt-1&#39;);" placeholder="VD: Đạt danh hiệu Thanh niên khỏe cấp trường lần 2 năm 2020."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2. Điểm trung bình của các môn Thể chất trong năm học 2020 - 2021:<br></legend><span><em>Chỉ tính trung bình các môn thể chất học trong năm học. Nếu không có, vui lòng ghi "</em><strong><em>Không.</em></strong><em>"</em></span><input class="form-control" type="text" id="tlt-2" autocomplete="on" required="" onload="loadData(&#39;tlt-2&#39;);" onblur="saveLocalStorage(&#39;tlt-2&#39;);" name="tlt-2" placeholder="VD: Không.">
+                            <legend style="font-size: 16px;font-weight: bold;">2. Điểm trung bình của các môn Thể chất trong năm học 2020 - 2021:<br></legend><span><em>Chỉ tính trung bình các môn thể chất học trong năm học. Nếu không có, vui lòng ghi "</em><strong><em>Không.</em></strong><em>"</em></span><input class="form-control" type="text" id="tlt-2" autocomplete="on" required="" onload="loadData(&#39;tlt-2&#39;);" onblur="saveLocalStorage(&#39;tlt-2&#39;);" name="entry.358614800" placeholder="VD: Không.">
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">3. Là vận động viên tham gia hội thao cấp LCH trở lên (chỉ tính các môn về vận động thể chất):<br></legend><span><br><em>Ghi rõ tên hội thao, đơn vị tổ chức, giải thưởng đạt được. Nếu không có, vui lòng ghi "</em><strong><em>Không.</em></strong><em>"</em><br></span><textarea class="form-control" id="tlt-3" name="tlt-3" required="" rows="4" wrap="soft" spellcheck="true" onload="loadData(&#39;tlt-3&#39;);" onblur="saveLocalStorage(&#39;tlt-3);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">3. Là vận động viên tham gia hội thao cấp LCH trở lên (chỉ tính các môn về vận động thể chất):<br></legend><span><br><em>Ghi rõ tên hội thao, đơn vị tổ chức, giải thưởng đạt được. Nếu không có, vui lòng ghi "</em><strong><em>Không.</em></strong><em>"</em><br></span><textarea class="form-control" id="tlt-3" name="entry.1887887894" required="" rows="4" wrap="soft" spellcheck="true" onload="loadData(&#39;tlt-3&#39;);" onblur="saveLocalStorage(&#39;tlt-3);" placeholder="VD: Không."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">4. Tham gia sinh hoạt định kỳ 01 CLB thể dục thể thao từ cấp LCH trở lên hoặc các Trung tâm Thể dục thể thao bên ngoài:<br></legend><span><em>Ghi rõ tên CLB, đơn vị trực thuộc của CLB.</em></span><textarea class="form-control" id="tlt-4" name="tlt-4" required="" rows="4" wrap="soft" spellcheck="true" onload="loadData(&#39;tlt-4&#39;);" onblur="saveLocalStorage(&#39;tlt-4&#39;);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">4. Tham gia sinh hoạt định kỳ 01 CLB thể dục thể thao từ cấp LCH trở lên hoặc các Trung tâm Thể dục thể thao bên ngoài:<br></legend><span><em>Ghi rõ tên CLB, đơn vị trực thuộc của CLB.</em></span><textarea class="form-control" id="tlt-4" name="entry.1165617464" required="" rows="4" wrap="soft" spellcheck="true" onload="loadData(&#39;tlt-4&#39;);" onblur="saveLocalStorage(&#39;tlt-4&#39;);" placeholder="VD: Không."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">5. Là thành viên các đội tuyển thể thao từ cấp trường trở lên:<br></legend><span><em>Ghi rõ môn thể thao thi đấu.</em></span><textarea class="form-control" id="tlt-5" name="tlt-5" required="" wrap="soft" spellcheck="true" rows="4" onload="loadData(&#39;tlt-5&#39;);" onblur="saveLocalStorage(&#39;tlt-5&#39;);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">5. Là thành viên các đội tuyển thể thao từ cấp trường trở lên:<br></legend><span><em>Ghi rõ môn thể thao thi đấu.</em></span><textarea class="form-control" id="tlt-5" name="entry.70496757" required="" wrap="soft" spellcheck="true" rows="4" onload="loadData(&#39;tlt-5&#39;);" onblur="saveLocalStorage(&#39;tlt-5&#39;);" placeholder="VD: Không."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">6. Đối với những sinh viên khuyết tật hoặc có giấy xác nhận của cơ sở y tế về tình trạng sức khỏe không thể tham gia các hoạt động thể thao trong suốt năm học 2020 – 2021 (Được miễn nội dung này):<br></legend><span><em>Nếu không có, vui lòng ghi "</em><strong><em>Không.</em></strong><em>"</em></span><textarea class="form-control" id="tlt-6" name="tlt-6" required="" rows="4" wrap="soft" spellcheck="true" onload="loadData(&#39;tlt-6&#39;);" onblur="saveLocalStorage(&#39;tlt-6&#39;);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">6. Đối với những sinh viên khuyết tật hoặc có giấy xác nhận của cơ sở y tế về tình trạng sức khỏe không thể tham gia các hoạt động thể thao trong suốt năm học 2020 – 2021 (Được miễn nội dung này):<br></legend><span><em>Nếu không có, vui lòng ghi "</em><strong><em>Không.</em></strong><em>"</em></span><textarea class="form-control" id="tlt-6" name="entry.450455132" required="" rows="4" wrap="soft" spellcheck="true" onload="loadData(&#39;tlt-6&#39;);" onblur="saveLocalStorage(&#39;tlt-6&#39;);" placeholder="VD: Không."></textarea>
                         </fieldset>
-                        <div class="btn-group btn-group-sm d-flex d-md-flex justify-content-center justify-content-md-center align-items-md-center" role="group" style="margin: 05vw;"><button class="btn btn-outline-secondary" id="back-4" type="button" onclick="prePart();"><strong>Trở lại</strong></button><button class="btn btn-outline-primary d-flex justify-content-lg-center" id="next-4" type="button" onclick="nextPart();"><strong>Tiếp tục</strong></button></div>
                     </div>
                 </div><!-- End: tlt -->
                 <!-- Start: tnt -->
-                <div class="row" id="tinh-nguyen-tot" hidden="">
+                <div class="row" id="tinh-nguyen-tot" hidden="" style="background: rgba(245,240,230,0.3);margin: 30px auto;padding: 30px 20px;">
                     <div class="col">
-                        <div class="progress" style="margin-right: 10vw;margin-left: 10vw;margin-top: 5vw;margin-bottom: 2vw;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" aria-valuenow="62.5" aria-valuemin="0" aria-valuemax="100" style="width: 62.5%;"><span class="visually-hidden">62.5%</span></div>
-                        </div>
                         <h3 class="text-center text-primary" style="margin-top: 20px;margin-bottom: 20px;"><strong>TÌNH NGUYỆN TỐT</strong></h3>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">1. Tham gia và nhận giấy chứng nhận hoàn thành 01 trong các chiến dịch, chương trình sau: Chiến dịch Mùa hè xanh 2021, chiến dịch Xuân tình nguyện 2021, chương trình Tiếp sức mùa thi 2021:<br></legend><span><br><em>Ghi rõ tên chiến dịch/ chương trình, đơn vị và thời gian tổ chức.</em><br></span><textarea class="form-control" id="tnt-1" name="tnt-1" required="" rows="4" spellcheck="true" wrap="soft" onload="loadData(&#39;tnt-1&#39;);" onblur="saveLocalStorage(&#39;tnt-1&#39;);" placeholder="VD: Tham gia chiến dịch &quot;Xuân tình nguyện 2021&quot; khoa Công nghệ Thông tin."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">1. Tham gia và nhận giấy chứng nhận hoàn thành 01 trong các chiến dịch, chương trình sau: Chiến dịch Mùa hè xanh 2021, chiến dịch Xuân tình nguyện 2021, chương trình Tiếp sức mùa thi 2021:<br></legend><span><br><em>Ghi rõ tên chiến dịch/ chương trình, đơn vị và thời gian tổ chức.</em><br></span><textarea class="form-control" id="tnt-1" name="entry.1962276945" required="" rows="4" spellcheck="true" wrap="soft" onload="loadData(&#39;tnt-1&#39;);" onblur="saveLocalStorage(&#39;tnt-1&#39;);" placeholder="VD: Tham gia chiến dịch &quot;Xuân tình nguyện 2021&quot; khoa Công nghệ Thông tin."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2. Tham gia và đạt điểm công tác xã hội/năm học:<br></legend><span><em>Ghi tổng số điểm CTXH đã đạt (lấy đến 1 chữ số sau dấu phẩy thập phân). Lưu ý: chỉ tính các hoạt động công tác xã hội được tổ chức trong năm học 2020 - 2021.</em></span><input class="form-control" type="text" id="tnt-2" required="" name="tnt-2" onload="loadData(&#39;tnt-2&#39;);" onblur="saveLocalStorage(&#39;tnt-2&#39;);" placeholder="VD: 30.0">
+                            <legend style="font-size: 16px;font-weight: bold;">2. Tham gia và đạt điểm công tác xã hội/năm học:<br></legend><span><em>Ghi tổng số điểm CTXH đã đạt (lấy đến 1 chữ số sau dấu phẩy thập phân). Lưu ý: chỉ tính các hoạt động công tác xã hội được tổ chức trong năm học 2020 - 2021.</em></span><input class="form-control" type="text" id="tnt-2" required="" name="entry.1761534341" onload="loadData(&#39;tnt-2&#39;);" onblur="saveLocalStorage(&#39;tnt-2&#39;);" placeholder="VD: 30.0">
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">3. Được khen thưởng từ cấp trường trở lên về hoạt động tình nguyện (ghi rõ hình thức, nội dung và cấp khen thưởng):<br></legend><span><br><em>Ghi rõ hình thức, nội dung và cấp khen thưởng.</em><br></span><textarea class="form-control" id="tnt-3" name="tnt-3" required="" rows="4" wrap="soft" spellcheck="true" onload="loadData(&#39;tnt-3&#39;);" onblur="saveLocalStorage(&#39;tnt-3&#39;);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">3. Được khen thưởng từ cấp trường trở lên về hoạt động tình nguyện (ghi rõ hình thức, nội dung và cấp khen thưởng):<br></legend><span><br><em>Ghi rõ hình thức, nội dung và cấp khen thưởng.</em><br></span><textarea class="form-control" id="tnt-3" name="entry.174635403" required="" rows="4" wrap="soft" spellcheck="true" onload="loadData(&#39;tnt-3&#39;);" onblur="saveLocalStorage(&#39;tnt-3&#39;);" placeholder="VD: Không."></textarea>
                         </fieldset>
-                        <div class="btn-group btn-group-sm d-flex d-md-flex justify-content-center justify-content-md-center align-items-md-center" role="group" style="margin: 05vw;"><button class="btn btn-outline-secondary" id="back-5" type="button" onclick="prePart();"><strong>Trở lại</strong></button><button class="btn btn-outline-primary" id="next-5" type="button" onclick="nextPart();"><strong>Tiếp tục</strong></button></div>
                     </div>
                 </div><!-- End: tnt -->
                 <!-- Start: hnt -->
-                <div class="row" id="hoi-nhap-tot" hidden="">
+                <div class="row" id="hoi-nhap-tot" hidden="" style="background: rgba(245,240,230,0.3);margin: 30px auto;padding: 30px 20px;">
                     <div class="col">
-                        <div class="progress" style="margin-right: 10vw;margin-left: 10vw;margin-top: 5vw;margin-bottom: 2vw;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"><span class="visually-hidden">75%</span></div>
-                        </div>
                         <h3 class="text-center text-primary" style="margin-top: 20px;margin-bottom: 20px;"><strong>HỘI NHẬP TỐT</strong></h3>
                         <h5 class="text-black-50" style="margin-top: 20px;"><strong># Về ngoại ngữ</strong></h5>
                         <fieldset style="margin: 10px;">
                             <legend style="font-size: 16px;font-weight: bold;">1.1.&nbsp;Đạt mốc đanh giá năng lực ngoại ngữ:<br></legend>
-                            <p style="margin: 0px;">- Khóa 2019, 2020: 420 TOEIC/JLPT N5 hoặc các ngôn ngữ tương đương.<br>- Khóa 2017, 2018: 450 TOEIC/JLPT N5 hoặc các ngôn ngữ tương đương.<br><em>Vui lòng ghi rõ tên chứng chỉ, ngoại ngữ nào, mức trình độ, đơn vị cấp, thời gian cấp.</em><br></p><textarea class="form-control" id="hnt-102" placeholder="VD: Đạt TOEIC 625, thi thử tại Trung tâm Anh ngữ $$$, ngày 18/11/2020." onblur="saveLocalStorage(&#39;hnt-101&#39;);" onload="loadData(&#39;hnt-101&#39;);" name="hnt-102" required="" spellcheck="true" wrap="soft" rows="4"></textarea>
+                            <p style="margin: 0px;">- Khóa 2019, 2020: 420 TOEIC/JLPT N5 hoặc các ngôn ngữ tương đương.<br>- Khóa 2017, 2018: 450 TOEIC/JLPT N5 hoặc các ngôn ngữ tương đương.<br><em>Vui lòng ghi rõ tên chứng chỉ, ngoại ngữ nào, mức trình độ, đơn vị cấp, thời gian cấp.</em><br></p><textarea class="form-control" id="hnt-102" placeholder="VD: Đạt TOEIC 625, thi thử tại Trung tâm Anh ngữ $$$, ngày 18/11/2020." onblur="saveLocalStorage(&#39;hnt-101&#39;);" onload="loadData(&#39;hnt-101&#39;);" name="entry.1052132495" required="" spellcheck="true" wrap="soft" rows="4"></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">1.2. Đạt chứng chỉ tiếng Anh trình độ B1 hoặc có điểm trung bình các học phần ngoại ngữ trong năm học 2020 - 2021 đạt từ 7.5/10 trở lên trong năm học:<br></legend><span><em>Ghi điểm trung bình của các học phần ngoại ngữ có trong năm học. Nếu không có, vui lòng ghi "</em><strong><em>Không.</em></strong><em>"</em></span><textarea class="form-control" id="hnt-102" name="hnt-102" required="" wrap="soft" spellcheck="true" onload="loadData(&#39;hnt-102&#39;);" onblur="saveLocalStorage(&#39;hnt-102&#39;);" rows="4" placeholder="VD: Đạt điểm trung bình ngoại ngữ 8.0/10.0"></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">1.2. Đạt chứng chỉ tiếng Anh trình độ B1 hoặc có điểm trung bình các học phần ngoại ngữ trong năm học 2020 - 2021 đạt từ 7.5/10 trở lên trong năm học:<br></legend><span><em>Ghi điểm trung bình của các học phần ngoại ngữ có trong năm học. Nếu không có, vui lòng ghi "</em><strong><em>Không.</em></strong><em>"</em></span><textarea class="form-control" id="hnt-102" name="entry.1650332459" required="" wrap="soft" spellcheck="true" onload="loadData(&#39;hnt-102&#39;);" onblur="saveLocalStorage(&#39;hnt-102&#39;);" rows="4" placeholder="VD: Đạt điểm trung bình ngoại ngữ 8.0/10.0"></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">1.3. Là thành viên đội tuyển hoặc tham gia các cuộc thi kiến thức ngoại ngữ (được hiểu là cuộc thi tìm hiểu ngoại ngữ hoặc cuộc thi sử dụng ngoại ngữ để trình bày) từ cấp LCH trở lên:<br></legend><span><br><em>Ghi rõ tên cuộc thi, đơn vị tổ chức, xếp loại, xếp hạng, giải thưởng đạt được.</em><br></span><textarea class="form-control" id="hnt-103" name="hnt-103" required="" wrap="soft" spellcheck="true" rows="4" placeholder="VD: Không." onload="loadData(&#39;hnt-103&#39;);" onblur="saveLocalStorage(&#39;hnt-103&#39;);"></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">1.3. Là thành viên đội tuyển hoặc tham gia các cuộc thi kiến thức ngoại ngữ (được hiểu là cuộc thi tìm hiểu ngoại ngữ hoặc cuộc thi sử dụng ngoại ngữ để trình bày) từ cấp LCH trở lên:<br></legend><span><br><em>Ghi rõ tên cuộc thi, đơn vị tổ chức, xếp loại, xếp hạng, giải thưởng đạt được.</em><br></span><textarea class="form-control" id="hnt-103" name="entry.1585603408" required="" wrap="soft" spellcheck="true" rows="4" placeholder="VD: Không." onload="loadData(&#39;hnt-103&#39;);" onblur="saveLocalStorage(&#39;hnt-103&#39;);"></textarea>
                         </fieldset>
                         <h5 class="text-black-50" style="margin-top: 20px;"><strong># Về tiêu chí khác</strong></h5>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.1. Tham gia các cuộc thi về kỹ năng từ cấp LCH trở lên:<br></legend><span><br><em>Ghi rõ tên cuộc thi, đơn vị và thời gian tổ chức, giải thưởng đạt được.</em><br></span><textarea class="form-control" id="hnt-201" name="hnt-201" required="" wrap="soft" spellcheck="true" rows="4" placeholder="VD: Không." onload="loadData(&#39;hnt-201&#39;);" onblur="saveLocalStorage(&#39;hnt-201&#39;);"></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.1. Tham gia các cuộc thi về kỹ năng từ cấp LCH trở lên:<br></legend><span><br><em>Ghi rõ tên cuộc thi, đơn vị và thời gian tổ chức, giải thưởng đạt được.</em><br></span><textarea class="form-control" id="hnt-201" name="entry.216760982" required="" wrap="soft" spellcheck="true" rows="4" placeholder="VD: Không." onload="loadData(&#39;hnt-201&#39;);" onblur="saveLocalStorage(&#39;hnt-201&#39;);"></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.2. Tích cực tham gia các hoạt động của Đoàn thanh niên – Hội sinh viên từ cấp Khoa trở lên (có xác nhận của Thường trực cơ sở Đoàn – Hội):<br></legend><textarea class="form-control" id="hnt-202" name="hnt-202" required="" wrap="soft" spellcheck="true" placeholder="VD: Không." onload="loadData(&#39;hnt-202&#39;);" onblur="saveLocalStorage(&#39;hnt-202&#39;);" rows="4"></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.2. Tích cực tham gia các hoạt động của Đoàn thanh niên – Hội sinh viên từ cấp Khoa trở lên (có xác nhận của Thường trực cơ sở Đoàn – Hội):<br></legend><textarea class="form-control" id="hnt-202" name="entry.115079036" required="" wrap="soft" spellcheck="true" placeholder="VD: Không." onload="loadData(&#39;hnt-202&#39;);" onblur="saveLocalStorage(&#39;hnt-202&#39;);" rows="4"></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.3. Tham gia các buổi tập huấn kỹ năng, tập huấn cán bộ Đoàn – Hội từ cấp khoa trở lên:<br></legend><span><br><em>Ghi rõ tên chương trình, thời gian và đơn vị tổ chức.</em><br></span><textarea class="form-control" id="hnt-203" name="hnt-203" required="" rows="4" wrap="soft" spellcheck="true" placeholder="VD: Không." onload="loadData(&#39;hnt-203&#39;);" onblur="saveLocalStorage(&#39;hnt-203&#39;);"></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.3. Tham gia các buổi tập huấn kỹ năng, tập huấn cán bộ Đoàn – Hội từ cấp khoa trở lên:<br></legend><span><br><em>Ghi rõ tên chương trình, thời gian và đơn vị tổ chức.</em><br></span><textarea class="form-control" id="hnt-203" name="entry.1552889467" required="" rows="4" wrap="soft" spellcheck="true" placeholder="VD: Không." onload="loadData(&#39;hnt-203&#39;);" onblur="saveLocalStorage(&#39;hnt-203&#39;);"></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.4. Tham dự ít nhất 01 hội thảo về kỹ năng từ cấp Trường trở lên:<br></legend><span><br><em>Nêu rõ tên hội thảo kỹ năng, thỏi gian và đơn vị tổ chức.</em><br></span><textarea class="form-control" id="hnt-204" name="hnt-204" required="" wrap="soft" spellcheck="true" rows="4" onload="loadData(&#39;hnt-204&#39;);" onblur="saveLocalStorage(&#39;hnt-204&#39;);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.4. Tham dự ít nhất 01 hội thảo về kỹ năng từ cấp Trường trở lên:<br></legend><span><br><em>Nêu rõ tên hội thảo kỹ năng, thỏi gian và đơn vị tổ chức.</em><br></span><textarea class="form-control" id="hnt-204" name="entry.136584160" required="" wrap="soft" spellcheck="true" rows="4" onload="loadData(&#39;hnt-204&#39;);" onblur="saveLocalStorage(&#39;hnt-204&#39;);" placeholder="VD: Không."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.5. Hoàn thành lớp kỹ năng thực hành xã hội từ cấp Trường trở lên trong năm học:<br></legend><span><br><em>Ghi rõ số lượng, nội dung kỹ năng, xếp loại (nếu có).</em><br></span><textarea class="form-control" id="hnt-205" name="hnt-205" required="" wrap="soft" spellcheck="true" rows="4" onload="loadData(&#39;hnt-205&#39;);" onblur="saveLocalStorage(&#39;hnt-205&#39;);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.5. Hoàn thành lớp kỹ năng thực hành xã hội từ cấp Trường trở lên trong năm học:<br></legend><span><br><em>Ghi rõ số lượng, nội dung kỹ năng, xếp loại (nếu có).</em><br></span><textarea class="form-control" id="hnt-205" name="entry.317750269" required="" wrap="soft" spellcheck="true" rows="4" onload="loadData(&#39;hnt-205&#39;);" onblur="saveLocalStorage(&#39;hnt-205&#39;);" placeholder="VD: Không."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.6. Tham dự hội thảo về kỹ năng từ cấp Trường trở lên:<br></legend><span><br><em>Ghi rõ tên Hội thảo, thời gian tham gia, đơn vị tổ chức.</em><br></span><textarea class="form-control" id="hnt-206" name="hnt-206" required="" rows="4" wrap="soft" spellcheck="true" onload="loadData(&#39;hnt-206&#39;);" onblur="saveLocalStorage(&#39;hnt-206&#39;);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.6. Tham dự hội thảo về kỹ năng từ cấp Trường trở lên:<br></legend><span><br><em>Ghi rõ tên Hội thảo, thời gian tham gia, đơn vị tổ chức.</em><br></span><textarea class="form-control" id="hnt-206" name="entry.1528980305" required="" rows="4" wrap="soft" spellcheck="true" onload="loadData(&#39;hnt-206&#39;);" onblur="saveLocalStorage(&#39;hnt-206&#39;);" placeholder="VD: Không."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.7. Tham gia hoạt động giao lưu quốc tế từ cấp LCH trở lên (hội nghị, hội thảo quốc tế, các chương trình gặp gỡ, giao lưu, hợp tác với thanh niên, sinh viên quốc tế trong và ngoài nước):<br></legend><span><br><em>Ghi rõ hoạt động, thời gian và đơn vị tổ chức.</em><br></span><textarea class="form-control" id="hnt-207" name="hnt-207" required="" wrap="soft" spellcheck="true" rows="4" placeholder="VD: Không." onload="loadData(&#39;hnt-207&#39;);" onblur="saveLocalStorage(&#39;hnt-207&#39;);"></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.7. Tham gia hoạt động giao lưu quốc tế từ cấp LCH trở lên (hội nghị, hội thảo quốc tế, các chương trình gặp gỡ, giao lưu, hợp tác với thanh niên, sinh viên quốc tế trong và ngoài nước):<br></legend><span><br><em>Ghi rõ hoạt động, thời gian và đơn vị tổ chức.</em><br></span><textarea class="form-control" id="hnt-207" name="entry.408647174" required="" wrap="soft" spellcheck="true" rows="4" placeholder="VD: Không." onload="loadData(&#39;hnt-207&#39;);" onblur="saveLocalStorage(&#39;hnt-207&#39;);"></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.8. Tham gia hội thảo về hội nhập, giới thiệu doanh nghiệp, phỏng vấn, tư vấn học bổng từ các doanh nghiệp từ cấp trường trở lên và tương đương:<br></legend><span><br><em>Ghi rõ tên hội thảo, thời gian và đơn vị tổ chức.</em><br></span><textarea class="form-control" id="hnt-208" name="hnt-208" required="" spellcheck="true" wrap="soft" rows="4" onload="loadData(&#39;hnt-208&#39;);" onblur="saveLocalStorage(&#39;hnt-208&#39;);" placeholder="VD: Không."></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.8. Tham gia hội thảo về hội nhập, giới thiệu doanh nghiệp, phỏng vấn, tư vấn học bổng từ các doanh nghiệp từ cấp trường trở lên và tương đương:<br></legend><span><br><em>Ghi rõ tên hội thảo, thời gian và đơn vị tổ chức.</em><br></span><textarea class="form-control" id="hnt-208" name="entry.798624648" required="" spellcheck="true" wrap="soft" rows="4" onload="loadData(&#39;hnt-208&#39;);" onblur="saveLocalStorage(&#39;hnt-208&#39;);" placeholder="VD: Không."></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.9. Được Đoàn Thanh niên - Hội Sinh viên từ cấp Khoa trở lên khen thưởng về thành tích xuất sắc trong công tác Đoàn và phong trào thanh niên hoặc công tác Hội và phong trào sinh viên và các khen thưởng khác tương đương:<br></legend><span><br><em>Ghi rõ hình thức, nội dung và cấp khen thưởng.</em><br></span><textarea class="form-control" id="hnt-209" name="hnt-209" required="" wrap="soft" spellcheck="true" placeholder="VD: Không." rows="4" onload="loadData(&#39;hnt-209&#39;);" onblur="saveLocalStorage(&#39;hnt-209&#39;);"></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.9. Được Đoàn Thanh niên - Hội Sinh viên từ cấp Khoa trở lên khen thưởng về thành tích xuất sắc trong công tác Đoàn và phong trào thanh niên hoặc công tác Hội và phong trào sinh viên và các khen thưởng khác tương đương:<br></legend><span><br><em>Ghi rõ hình thức, nội dung và cấp khen thưởng.</em><br></span><textarea class="form-control" id="hnt-209" name="entry.1977587870" required="" wrap="soft" spellcheck="true" placeholder="VD: Không." rows="4" onload="loadData(&#39;hnt-209&#39;);" onblur="saveLocalStorage(&#39;hnt-209&#39;);"></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.10. Thành viên sinh hoạt định kỳ của CLB/ Đội/ Nhóm/ Trung tâm từ cấp LCH trở lên hoặc cán bộ Đoàn - Hội từ cấp Ủy viên BCH Chi Đoàn - Chi Hội trở lên có hoạt động tích cực:<br></legend><textarea class="form-control" id="hnt-210" name="hnt-210" required="" wrap="soft" spellcheck="true" placeholder="VD: Không." rows="4" onload="loadData(&#39;hnt-210&#39;);" onblur="saveLocalStorage(&#39;hnt-210&#39;);"></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.10. Thành viên sinh hoạt định kỳ của CLB/ Đội/ Nhóm/ Trung tâm từ cấp LCH trở lên hoặc cán bộ Đoàn - Hội từ cấp Ủy viên BCH Chi Đoàn - Chi Hội trở lên có hoạt động tích cực:<br></legend><textarea class="form-control" id="hnt-210" name="entry.1158586208" required="" wrap="soft" spellcheck="true" placeholder="VD: Không." rows="4" onload="loadData(&#39;hnt-210&#39;);" onblur="saveLocalStorage(&#39;hnt-210&#39;);"></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2.11. Là cộng tác viên của Đoàn - Hội từ cấp Khoa trở lên có hoạt động tích cực từ cấp khoa trở lên:<br></legend><textarea class="form-control" id="hnt-211" name="hnt-211" required="" wrap="soft" spellcheck="true" placeholder="VD: CTV Đoàn - Hội Khoa Công nghệ Thông tin." rows="4" onload="loadData(&#39;hnt-211&#39;);" onblur="saveLocalStorage(&#39;hnt-211&#39;);"></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2.11. Là cộng tác viên của Đoàn - Hội từ cấp Khoa trở lên có hoạt động tích cực từ cấp khoa trở lên:<br></legend><textarea class="form-control" id="hnt-211" name="entry.612622002" required="" wrap="soft" spellcheck="true" placeholder="VD: CTV Đoàn - Hội Khoa Công nghệ Thông tin." rows="4" onload="loadData(&#39;hnt-211&#39;);" onblur="saveLocalStorage(&#39;hnt-211&#39;);"></textarea>
                         </fieldset>
-                        <div class="btn-group btn-group-sm d-flex d-md-flex justify-content-center justify-content-md-center align-items-md-center" role="group" style="margin: 5vw;"><button class="btn btn-outline-secondary" id="back-6" type="button" onclick="prePart();"><strong>Trở lại</strong></button><button class="btn btn-outline-primary" id="next-6" type="button" onclick="nextPart();"><strong>Tiếp tục</strong></button></div>
                     </div>
                 </div><!-- End: hnt -->
                 <!-- Start: ut -->
-                <div class="row" id="uu-tien" hidden="">
+                <div class="row" id="uu-tien" hidden="" style="background: rgba(245,240,230,0.3);margin: 30px auto;padding: 30px 20px;">
                     <div class="col">
-                        <div class="progress" style="margin-right: 10vw;margin-left: 10vw;margin-top: 5vw;margin-bottom: 2vw;">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" aria-valuenow="87.5" aria-valuemin="0" aria-valuemax="100" style="width: 87.5%;"><span class="visually-hidden">87.5%</span></div>
-                        </div>
                         <h3 class="text-center text-primary" style="margin-top: 20px;margin-bottom: 20px;"><strong>TIÊU CHUẨN ƯU TIÊN</strong></h3>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">1.&nbsp;Tham gia và đạt giải trong các cuộc thi tìm hiểu về văn hóa, lịch sử, xã hội trong nước và thế giới từ cấp trường trở lên:<br></legend><span><br><em>Ghi rõ tên cuộc thi, thời gian, đơn vị tổ chức, giải thưởng đạt được.</em><br></span><textarea class="form-control" id="ut-1" name="ut-1" required="" wrap="soft" spellcheck="true" rows="4" placeholder="VD: Không." onload="loadData(&#39;ut-1&#39;);" onblur="saveLocalStorage(&#39;ut-1&#39;);"></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">1.&nbsp;Tham gia và đạt giải trong các cuộc thi tìm hiểu về văn hóa, lịch sử, xã hội trong nước và thế giới từ cấp trường trở lên:<br></legend><span><br><em>Ghi rõ tên cuộc thi, thời gian, đơn vị tổ chức, giải thưởng đạt được.</em><br></span><textarea class="form-control" id="ut-1" name="entry.1050338963" required="" wrap="soft" spellcheck="true" rows="4" placeholder="VD: Không." onload="loadData(&#39;ut-1&#39;);" onblur="saveLocalStorage(&#39;ut-1&#39;);"></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">2. Thanh niên tiêu biểu được biểu dương trên các lĩnh vực:<br></legend><textarea class="form-control" id="ut-2" name="ut-2" required="" wrap="soft" spellcheck="true" rows="4" placeholder="VD: Không." onload="loadData(&#39;ut-2&#39;);" onblur="saveLocalStorage(&#39;ut-2&#39;);"></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">2. Thanh niên tiêu biểu được biểu dương trên các lĩnh vực:<br></legend><textarea class="form-control" id="ut-2" name="entry.1510200804" required="" wrap="soft" spellcheck="true" rows="4" placeholder="VD: Không." onload="loadData(&#39;ut-2&#39;);" onblur="saveLocalStorage(&#39;ut-2&#39;);"></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">3. Số lần hiến máu tình nguyện trong năm học 2019 – 2020:<br></legend><textarea class="form-control" id="ut-3" name="ut-3" required="" wrap="soft" spellcheck="true" rows="4" placeholder="VD: Không." onload="loadData(&#39;ut-4&#39;);" onblur="saveLocalStorage(&#39;ut-3&#39;);"></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">3. Số lần hiến máu tình nguyện trong năm học 2019 – 2020:<br></legend><textarea class="form-control" id="ut-3" name="entry.548046779" required="" wrap="soft" spellcheck="true" rows="4" placeholder="VD: Không." onload="loadData(&#39;ut-4&#39;);" onblur="saveLocalStorage(&#39;ut-3&#39;);"></textarea>
                         </fieldset>
                         <fieldset style="margin: 10px;">
-                            <legend style="font-size: 16px;font-weight: bold;">4. Các thành tích khác:<br></legend><textarea class="form-control" id="ut-4" name="ut-4" required="" wrap="soft" spellcheck="true" placeholder="VD: Không." rows="4" onload="loadData(&#39;ut-4&#39;);" onblur="saveLocalStorage(&#39;ut-4&#39;);"></textarea>
+                            <legend style="font-size: 16px;font-weight: bold;">4. Các thành tích khác:<br></legend><textarea class="form-control" id="ut-4" name="entry.1804967853" required="" wrap="soft" spellcheck="true" placeholder="VD: Không." rows="4" onload="loadData(&#39;ut-4&#39;);" onblur="saveLocalStorage(&#39;ut-4&#39;);"></textarea>
                         </fieldset>
-                        <div class="form-check" id="ckb" style="margin: 20px;" name="ckb" onclick="checkUserInput();"><input class="form-check-input" type="checkbox" id="ckb-xac-nhan"><label class="form-check-label" id="label-ckb-xac-nhan" for="ckb-xac-nhan">Tôi xác nhận đã điền đầy đủ thông tin và đã kiểm tra kỹ các thông tin trước khi gửi.&nbsp;</label></div>
-                        <div class="btn-group btn-group-sm d-flex d-md-flex justify-content-center justify-content-md-center align-items-md-center" role="group" style="margin: 5vw;"><button class="btn btn-outline-secondary" id="back-7" type="button" onclick="prePart();"><strong>Trở lại</strong></button><button class="btn btn-outline-warning disabled" id="submit" type="submit" disabled=""><strong>Gửi</strong></button></div>
                     </div>
                 </div><!-- End: ut -->
-                <!-- Start: submit -->
-                <div class="row" id="submit" hidden="">
+                <div class="row" id="xac-nhan" hidden="" style="transform: perspective(0px) translate(0px) scale(1) skew(0deg);">
+                    <div class="col d-md-flex justify-content-md-center" style="padding-right: 20px;padding-left: 20px;">
+                        <div class="form-check" id="ckb" style="margin: 20px;" name="ckb" onclick="checkUserInput();"><input class="form-check-input" type="checkbox" id="ckb-xac-nhan"><label class="form-check-label text-danger" id="label-ckb-xac-nhan" for="ckb-xac-nhan" style="font-weight: bold;">Tôi xác nhận đã điền đầy đủ thông tin và kiểm tra kỹ các thông tin trước khi gửi.&nbsp;</label></div>
+                    </div>
+                </div><!-- Start: back-next -->
+                <div class="row">
                     <div class="col">
-                        <div class="progress" style="margin-right: 10vw;margin-left: 10vw;margin-top: 5vw;margin-bottom: 2vw;">
-                            <div class="progress-bar progress-bar-animated" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"><span class="visually-hidden">100%</span></div>
-                        </div>
-                        <h3 class="text-center text-primary" style="margin-top: 20px;margin-bottom: 20px;"><strong>CẢM ƠN</strong></h3>
-                        <div class="row">
-                            <div class="col-10" style="margin: auto;">
-                                <p class="text-center d-md-flex justify-content-md-center"><strong>Cảm ơn bạn đã điền hồ sơ xét Sinh viên 5 tốt các cấp. Chúc bạn nhiều sức khỏe và học tập tốt.</strong><br></p>
-                                <p class="text-center d-md-flex justify-content-md-center"><strong>Vui lòng thường xuyên kiểm tra email để kịp thời nhận được các thông tin mới nhất về việc xét Sinh viên 5 tốt. Đừng quên truy cập "<em>Group hỗ trợ"</em> nếu bạn có bất kỳ thắc mắc gì về xét Sinh viên 5 tốt nhé!</strong><br></p>
+                        <div class="btn-group btn-group-sm d-flex d-md-flex justify-content-center justify-content-md-center align-items-md-center" role="group" style="margin: 2vw 5vw;"><button class="btn btn-outline-secondary disabled" id="back" type="button" style="font-weight: bold;margin: 5px;" disabled="" onclick="prePart();">Trở lại</button><button class="btn btn-outline-primary" id="next" type="button" onclick="nextPart();" style="font-weight: bold;margin: 5px;">Tiếp tục</button></div>
+                    </div>
+                </div><!-- End: back-next -->
+                <!-- Start: iframe -->
+                <section id="hidden_iframe" name="hidden_iframe" hidden="" onload="showTarget(submitted);">
+                    <!-- Start: submit -->
+                    <div class="row" id="submit" style="background: rgba(245,240,230,0.3);margin: 30px auto;padding: 30px 20px;">
+                        <div class="col">
+                            <h3 class="text-center text-primary" style="margin-top: 20px;margin-bottom: 20px;"><strong>CẢM ƠN</strong></h3>
+                            <div class="row">
+                                <div class="col-10" style="margin: auto;">
+                                    <p class="text-center d-md-flex justify-content-md-center"><strong>Cảm ơn bạn đã điền hồ sơ xét Sinh viên 5 tốt các cấp. Chúc bạn nhiều sức khỏe và học tập tốt.</strong><br></p>
+                                    <p class="text-center d-md-flex justify-content-md-center"><strong>Vui lòng thường xuyên kiểm tra email để kịp thời nhận được các thông tin mới nhất về việc xét Sinh viên 5 tốt. Đừng quên truy cập "<em>Group hỗ trợ"</em> nếu bạn có bất kỳ thắc mắc gì về xét Sinh viên 5 tốt nhé!</strong><br></p>
+                                </div>
                             </div>
                         </div>
-                        <div class="btn-group btn-group-sm d-flex d-md-flex justify-content-center justify-content-md-center align-items-md-center" role="group" style="margin: 5vw;"><a class="btn btn-outline-secondary" role="button" id="back-home" href="https://itute.github.io"><strong>Về trang chủ</strong></a><a class="btn btn-outline-primary" role="button" id="fb-group" href="https://itute.tiny.us/sv5t"><strong>Group hỗ trợ</strong></a></div>
-                    </div>
-                </div><!-- End: submit -->
+                    </div><!-- End: submit -->
+                </section><!-- End: iframe -->
             </form>
         </section>
     </div><!-- Start: Bold BS4 Footer Big Logo -->
@@ -410,7 +394,7 @@
             </div>
         </div>
     </footer><!-- End: Bold BS4 Footer Big Logo -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/form.js"></script>
     <script src="assets/js/Paralax-Hero-Banner.js"></script>
