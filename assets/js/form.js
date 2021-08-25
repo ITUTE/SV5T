@@ -102,5 +102,5 @@ function saveValueToLocalStorage(field, value) {
 }
 
 function submitForm() {
-    window.open('./thanks.html', '_self', 'toolbar=0,location=0,menubar=0');
+    window.open('./index.html', '_blank', 'toolbar=0,location=0,menubar=0');
 }
