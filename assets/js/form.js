@@ -102,6 +102,5 @@ function saveValueToLocalStorage(field, value) {
 }
 
 function submitForm() {
-    window.open("./thanks.html");
-    setTimeout(() => { window.location.href = "./index.html"; }, 1000);
+    window.open('./thanks.html', '_self', 'toolbar=0,location=0,menubar=0');
 }
