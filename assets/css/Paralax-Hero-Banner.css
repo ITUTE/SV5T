@@ -7,6 +7,7 @@ div.jumbotron.hero-technology {
   padding-top: 100px;
   padding-bottom: 100px;
   background-attachment: local;
+  background-repeat: no-repeat;
 }
 
 h1.hero-title, h2.hero-title, h3.hero-title {
