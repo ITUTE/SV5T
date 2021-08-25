@@ -14,7 +14,6 @@ function nextPart() {
     if (next > parts.length) {
         checkUserInput();
     } else if (next == parts.length) {
-        //document.getElementById("xac-nhan").hidden = false;
         hideAllParts(false);
         var btnSubmit = document.getElementById("next");
         btnSubmit.type = "submit";
@@ -43,16 +42,19 @@ function prePart() {
 
     saveValueToLocalStorage("current", pre);
     if (pre <= 0) {
-        var btn = document.getElementById("back");
-        btn.disabled = true;
-        btn.className = "btn btn-outline-secondary disabled";
+        var btnBack = document.getElementById("back");
+        btnBack.disabled = true;
+        btnBack.className = "btn btn-outline-secondary disabled";
         showPart(parts[current], parts[pre]);
     } else if (pre == parts.length - 1) {
-        document.getElementById("alert").hidden = true;
         hideAllParts(true);
         document.getElementById(parts[pre]).hidden = false;
-    }
-    else
+        var btnNext = document.getElementById("next");
+        btnNext.type = "button";
+        btnNext.innerHTML = "Tiếp tục";
+        btnNext.className = "btn btn-outline-primary";
+        btnNext.disabled = false;
+    } else
         showPart(parts[current], parts[pre]);
 }
 
@@ -100,7 +102,5 @@ function saveValueToLocalStorage(field, value) {
 }
 
 function submitForm() {
-    window.location.href = "./thanks.html";
-    document.forms[0].submit();
-    return true;
+    window.open("./thanks.html");
 }
