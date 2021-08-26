@@ -102,5 +102,5 @@ function saveValueToLocalStorage(field, value) {
 }
 
 function submitForm() {
-    window.open('https://itute.github.io/', '_blank', 'toolbar=0,location=0,menubar=0');
+    window.open('https://itute.github.io/', '_self');
 }
