@@ -102,6 +102,7 @@ function saveValueToLocalStorage(field, value) {
 }
 
 function submitForm() {
-    window.alert("Xác nhận gửi?")
+    window.alert("Gửi thành công!");
+    //$('#model-message').modal('show');
     window.open('https://itute.github.io/');
 }
