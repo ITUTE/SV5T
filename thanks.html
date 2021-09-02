@@ -52,6 +52,30 @@
             </div>
         </div><!-- End: submit -->
     </section><!-- End: iframe -->
+    <!-- Start: FB plugin --><!-- Your Plugin chat code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+<script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "1453720424858441");
+    chatbox.setAttribute("attribution", "biz_inbox");
+
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml: true,
+            version: 'v11.0'
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script><!-- End: FB plugin -->
     <!-- Start: Bold BS4 Footer Big Logo -->
     <footer id="myFooter" style="margin-top: 100px;background: url(&quot;assets/img/background/background.jpg&quot;) left, rgba(0,0,0,0);">
         <div class="container-fluid">
