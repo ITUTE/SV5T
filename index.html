@@ -41,7 +41,7 @@
         <!-- Start: Content -->
         <div class="container d-flex justify-content-center align-items-center parallax-content" style="height:100vh;">
             <div class="col-12 col-md-10 col-lg-8 d-flex justify-content-center flex-column"><img src="assets/img/slogan.png"><!-- Start: ♣ Countdown BS4 ♣ -->
-                <section class="rubberBand animated text-white" style="padding: 0px;font-weight: bold;">
+                <section class="bounce animated text-white" style="padding: 0px;font-weight: bold;">
                     <!-- Start: Big countdown -->
                     <div class="container text-center boxed-countdown" data-countdown="09/20/2021 00:00:00" style="padding: 0px;">
                         <div class="row d-md-flex" style="margin: 0px;">
@@ -51,22 +51,22 @@
                         </div>
                         <div class="row" style="margin: 0px;">
                             <!-- Start: Days -->
-                            <div class="col-6 col-sm-3 col-md-3 mt-3">
+                            <div class="col-6 col-sm-3 col-md-3 mt-3" id="days">
                                 <p class="number-days m-0 rounded-top" style="background: var(--bs-red);font-size: 80px;">00</p>
                                 <p class="text-countdown rounded-bottom" style="background: var(--bs-warning);">Ngày</p>
                             </div><!-- End: Days -->
                             <!-- Start: Hours -->
-                            <div class="col-6 col-sm-3 col-md-3 mt-3">
+                            <div class="col-6 col-sm-3 col-md-3 mt-3" id="hours">
                                 <p class="number-hours m-0 rounded-top" style="background: var(--bs-red);font-size: 80px;">00</p>
                                 <p class="text-countdown rounded-bottom" style="background: var(--bs-yellow);">Giờ</p>
                             </div><!-- End: Hours -->
                             <!-- Start: Minutes -->
-                            <div class="col-6 col-sm-3 col-md-3 mt-3">
+                            <div class="col-6 col-sm-3 col-md-3 mt-3" id="minutes">
                                 <p class="number-minutes m-0 rounded-top" style="background: var(--bs-red);font-size: 80px;">00</p>
                                 <p class="text-countdown rounded-bottom" style="background: var(--bs-yellow);">Phút</p>
                             </div><!-- End: Minutes -->
                             <!-- Start: Seconds -->
-                            <div class="col-6 col-sm-3 col-md-3 mt-3">
+                            <div class="col-6 col-sm-3 col-md-3 mt-3" id="seconds">
                                 <p class="number-seconds m-0 rounded-top" style="background: var(--bs-danger);font-size: 80px;">00</p>
                                 <p class="text-countdown rounded-bottom" style="background: var(--bs-yellow);">Giây</p>
                             </div><!-- End: Seconds -->
@@ -82,34 +82,35 @@
         <div class="parallax-placeholder" style="background: url(&quot;assets/img/background/bg_banner.jpg&quot;) left;"></div><!-- End: Placeholder for mobile devices -->
     </div><!-- End: Video Parallax Background v2 -->
     <div id="cau-hoi-thuong-gap"></div><!-- Start: Article Dual Column -->
-    <section data-aos="fade-up" class="article-dual-column" style="background: url(&quot;assets/img/background/bg.jpg&quot;) center / cover no-repeat;height: 100%;">
+    <section data-aos="fade-up" class="article-dual-column" style="height: 100%;background: rgba(248,243,240,0.15);">
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="text-center text-warning" style="font-family: 'Alfa Slab One', serif;background: rgba(29,167,167,0.85);padding: 10px;padding-top: 15px;text-shadow: 1px 1px rgb(130,54,11);box-shadow: 4px 4px;margin-top: 5vw;margin-right: 10vw;margin-bottom: 0px;margin-left: 10vw;">CÂU HỎI THƯỜNG GẶP</h1>
+                    <h1 class="text-center text-warning" style="font-family: 'Alfa Slab One', serif;background: rgba(29,167,167,0.85);padding: 10px;padding-top: 15px;text-shadow: 1px 1px rgb(130,54,11);box-shadow: 4px 4px;margin-top: 3vw;margin-right: 10vw;margin-bottom: 0px;margin-left: 10vw;">CÂU HỎI THƯỜNG GẶP</h1>
                 </div>
                 <div class="col-md-10 offset-md-1 d-lg-flex justify-content-lg-center">
                     <!-- Start: Intro -->
                     <div class="intro"><img class="img-fluid" src="assets/img/background/itute_sv5t.jpg" loading="lazy" style="filter: brightness(100%);opacity: 1;"></div><!-- End: Intro -->
                 </div>
             </div>
-            <div class="row">
+            <div class="row" style="padding-bottom: 30px;">
                 <div class="col-md-10 col-lg-3 offset-md-1">
-                    <!-- Start: Toc -->
-                    <div id="danh-sach-faq" class="toc">
-                        <p class="text-danger" style="font-size: 20px;font-weight: bold;text-align: center;background: rgba(211,78,91,0.47);box-shadow: inset 6px 0px;">mục lục</p>
-                        <ol class="text-secondary" style="font-size: 16px;font-weight: bold;">
-                            <li><a href="#tieu-chi-sv5t-cntt-2021">Bộ tiêu chí Sinh viên 5 tốt Liên Chi hội khoa CNTT (HCMUTE) năm học 2020 - 2021</a> </li>
-                            <li><a href="#cach-tinh-diem-trung-binh">Cách tính điểm trung bình</a> </li>
-                            <li><a href="#thoi-gian-cong-nhan-thanh-tich-xet-danh-hieu">Thời gian công nhận thành tích xét danh hiệu</a></li>
-                            <li><a href="#minh-chung-tham-gia-cac-chuong-trinh-to-chuc-online" data-bs-target="#minh-chung-tham-gia-cac-chuong-trinh-to-chuc-online">Minh chứng tham gia các chương trình tổ chức online</a> </li>
-                        </ol>
-                    </div><!-- End: Toc -->
+                    <p class="text-uppercase text-danger" style="font-size: 20px;font-weight: bold;text-align: center;background: rgba(211,78,91,0.47);box-shadow: inset 6px 0px;margin-bottom: 5px;">mục lục</p>
+                    <nav class="navbar navbar-light navbar-expand-md flex-row section-nav" id="toc" style="padding: 0px;">
+                        <div class="container-fluid">
+                            <ol class="text-secondary" style="font-size: 16px;font-weight: bold;padding: 0px;">
+                                <li><a href="#tieu-chi-sv5t-cntt-2021">Bộ tiêu chí Sinh viên 5 tốt Liên Chi hội khoa CNTT (HCMUTE) năm học 2020 - 2021</a> </li>
+                                <li><a href="#cach-tinh-diem-trung-binh">Cách tính điểm trung bình</a> </li>
+                                <li><a href="#thoi-gian-cong-nhan-thanh-tich-xet-danh-hieu">Thời gian công nhận thành tích xét danh hiệu</a></li>
+                                <li><a href="#minh-chung-tham-gia-cac-chuong-trinh-to-chuc-online" data-bs-target="#minh-chung-tham-gia-cac-chuong-trinh-to-chuc-online">Minh chứng tham gia các chương trình tổ chức online</a> </li>
+                            </ol>
+                        </div>
+                    </nav>
                 </div>
                 <div class="col-md-10 col-lg-7 offset-md-1 offset-lg-0">
                     <!-- Start: Text -->
                     <div id="tieu-chi-sv5t-cntt-2021" class="text" style="margin-top: 0px;margin-bottom: 20px;">
-                        <h4 class="text-uppercase text-danger" id="minh-chung-tham-gia-cac-chuong-trinh-to-chuc-online-1" style="margin-top: 0px;font-family: 'Alfa Slab One', serif;background: rgba(211,78,91,0.47);box-shadow: inset 6px 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 20px;padding-left: 20px;">Bộ tiêu chí Sinh viên 5 tốt Liên Chi hội khoa CNTT (HCMUTE) năm học 2020 - 2021</h4>
+                        <h4 class="text-uppercase text-danger" id="minh-chung-tham-gia-cac-chuong-trinh-to-chuc-online-1" style="margin-top: 0px;font-family: 'Alfa Slab One', serif;background: rgba(211,78,91,0.35);box-shadow: inset 6px 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 20px;padding-left: 20px;">Bộ tiêu chí Sinh viên 5 tốt Liên Chi hội khoa CNTT (HCMUTE) năm học 2020 - 2021</h4>
                         <p style="margin: 10px 0px;text-align: justify;">Bộ tiêu chí Sinh viên 5 tốt LCH khoa CNTT, xin vòng lòng xem tại:&nbsp;<a href="https://itute.tiny.us/TC-SV5T-CNTT-2021" target="_blank">https://itute.tiny.us/TC-SV5T-CNTT-2021</a>.<br></p>
                         <p style="margin: 10px 0px;text-align: justify;">Thông tin chi tiết, vui lòng xem tại:<br>📌Cấp Liên Chi hội khoa CNTT:&nbsp;<a href="https://itute.tiny.us/TieuChi-LCH-2021?fbclid=IwAR1SMx5TrwrlvLup0EXSGpcr7hG_txtI61HEWJwnjRLuzToQ2pZsaoec-hE" target="_blank">https://itute.tiny.us/TieuChi-LCH-2021</a><br>📌Cấp trường:&nbsp;<a href="https://itute.tiny.us/sv5t-cap-truong-2021-updated?fbclid=IwAR3Ro8PC5TGpWoD2634Yss4eC6qDr_rfmuqykbC6QadFFFw3fRPgydMLWGo" target="_blank">https://itute.tiny.us/sv5t-cap-truong-2021-updated</a><br></p>
                         <p style="margin: 10px 0px;"><strong><em>Lưu ý:</em></strong> Tất cả các thành tích xét trao danh hiệu “Sinh viên 5 tốt” và “Tập thể sinh viên 5 tốt” năm học 2020 - 2021 được tính <strong>từ ngày 01/08/2020 đến ngày 15/09/2021 và có đầy đủ minh chứng kèm theo.</strong></p>
@@ -119,26 +120,26 @@
                     </div><!-- End: Text -->
                     <!-- Start: Text -->
                     <div id="cach-tinh-diem-trung-binh" class="text" style="margin: 20px 0px;">
-                        <h4 class="text-uppercase text-danger" style="margin-top: 0px;font-family: 'Alfa Slab One', serif;background: rgba(211,78,91,0.47);box-shadow: inset 6px 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 20px;padding-left: 20px;" id="cach-tinh-diem-trung-binh">Cách tính điểm trung bình</h4>
+                        <h4 class="text-uppercase text-danger" style="margin-top: 0px;font-family: 'Alfa Slab One', serif;background: rgba(211,78,91,0.35);box-shadow: inset 6px 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 20px;padding-left: 20px;" id="cach-tinh-diem-trung-binh">Cách tính điểm trung bình</h4>
                         <p style="margin-bottom: 0px;text-align: justify;">Điểm trung bình được tính theo hệ số tín chỉ. Cụ thể công thức tính điểm trung bình như sau:</p>
                         <figure class="figure" style="margin-bottom: 0px;margin-top: 20px;"><img class="img-fluid figure-img" src="assets/img/huong-dan/tinh-dtb.png" loading="lazy"></figure>
                     </div><!-- End: Text -->
                     <!-- Start: Text -->
                     <div id="thoi-gian-cong-nhan-thanh-tich-xet-danh-hieu" class="text" style="margin: 20px 0px;">
-                        <h4 class="text-uppercase text-danger" style="margin-top: 0px;font-family: 'Alfa Slab One', serif;background: rgba(211,78,91,0.47);box-shadow: inset 6px 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 20px;padding-left: 20px;" id="thoi-gian-cong-nhan-thanh-tich-xet-danh-hieu">THỜI GIAN CÔNG NHẬN THÀNH TÍCH XÉT DANH HIỆU</h4>
+                        <h4 class="text-uppercase text-danger" style="margin-top: 0px;font-family: 'Alfa Slab One', serif;background: rgba(211,78,91,0.35);box-shadow: inset 6px 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 20px;padding-left: 20px;" id="thoi-gian-cong-nhan-thanh-tich-xet-danh-hieu">THỜI GIAN CÔNG NHẬN THÀNH TÍCH XÉT DANH HIỆU</h4>
                         <p style="text-align: justify;margin: 10px 0px;">Tất cả các thành tích xét trao danh hiệu “Sinh viên 5 tốt” và “Tập thể sinh viên 5 tốt” năm học 2020 - 2021 được tính&nbsp;<strong>từ ngày&nbsp;01/08/2020 đến ngày 15/09/2021 và có đầy đủ minh chứng kèm theo.</strong><br></p>
                         <p style="margin: 10px 0px;text-align: justify;">Theo đó, đặc biệt lưu ý, nếu sinh viên đăng ký và tham gia Chương trình <strong>Tiếp sức mùa thi 2020</strong> do Hội Sinh viên trường ĐH Sư phạm Kỹ thuật TPHCM tổ chức, thì chỉ công nhận điểm CTXH cho Giai đoạn 2 của chương trình (hỗ trợ Tân sinh viên trường nhập học).<br></p>
                     </div><!-- End: Text -->
                     <!-- Start: Text -->
                     <div id="thoi-gian-cong-nhan-thanh-tich-xet-danh-hieu-1" class="text" style="margin: 20px 0px;">
-                        <h4 class="text-uppercase text-danger" style="margin-top: 0px;font-family: 'Alfa Slab One', serif;background: rgba(211,78,91,0.47);box-shadow: inset 6px 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 20px;padding-left: 20px;" id="minh-chung-tham-gia-cac-chuong-trinh-to-chuc-online">Minh chứng tham gia các chương trình tổ chức online</h4>
+                        <h4 class="text-uppercase text-danger" style="margin-top: 0px;font-family: 'Alfa Slab One', serif;background: rgba(211,78,91,0.35);box-shadow: inset 6px 0px;padding-top: 5px;padding-bottom: 5px;padding-right: 20px;padding-left: 20px;" id="minh-chung-tham-gia-cac-chuong-trinh-to-chuc-online">Minh chứng tham gia các chương trình tổ chức online</h4>
                         <p style="margin-bottom: 0px;">Tất cả các thành tích xét trao danh hiệu “Sinh viên 5 tốt” và “Tập thể sinh viên 5 tốt” năm học 2020 - 2021 được tính <strong>từ ngày 01/08/2020 đến ngày 15/09/2021 và có đầy đủ minh chứng kèm theo.</strong></p>
                     </div><!-- End: Text -->
                 </div>
             </div>
         </div>
     </section><!-- End: Article Dual Column -->
-    <section style="background: url(&quot;assets/img/background/content_background.jpg&quot;) no-repeat, var(--bs-red);background-size: cover, auto;">
+    <section data-aos="fade-up" style="background: url(&quot;assets/img/background/content_background.jpg&quot;) no-repeat, var(--bs-red);background-size: cover, auto;margin: 10px 0px;">
         <div class="container" style="padding-top: 2vw;">
             <h1 class="text-uppercase text-center text-warning" style="font-family: 'Alfa Slab One', serif;background: rgba(29,167,167,0.85);padding: 10px;padding-top: 15px;text-shadow: 1px 1px rgb(130,54,11);box-shadow: 4px 4px;margin-right: 10vw;margin-bottom: 50px;margin-left: 10vw;margin-top: 30px;" id="minh-chung-tham-gia-cac-chuong-trinh-to-chuc-online-2">ĐỘI NGŨ TƯ VẤN</h1>
             <div class="row d-md-flex d-lg-flex justify-content-md-center justify-content-lg-center" style="margin-right: 0px;margin-left: 0px;">
@@ -146,7 +147,7 @@
                     <h3 class="text-danger m-2" style="font-weight: bold;">Minh Tiến</h3>
                     <h5 class="my-1">Trưởng ban</h5>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-4 mb-4 text-center"><a href="https://www.facebook.com/luan.diep.92"><img class="rounded-circle img-fluid d-block mx-auto" src="assets/img/profile/dtl.jpg" style="max-width: 15vw;" loading="lazy"></a>
+                <div class="col-sm-6 col-md-4 col-lg-4 mb-4 text-center"><a href="https://www.facebook.com/luan.diep.92" target="_blank"><img class="rounded-circle img-fluid d-block mx-auto" src="assets/img/profile/dtl.jpg" style="max-width: 15vw;" loading="lazy"></a>
                     <h3 class="text-danger m-2" style="font-weight: bold;">Diệp Tấn Luân</h3>
                     <h5 class="my-1">Phó ban</h5>
                 </div>
@@ -167,19 +168,42 @@
     </section><!-- Your Plugin chat code -->
 <div id="fb-customer-chat" class="fb-customerchat">
 </div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.add('active');
+                } else {
+                    document.querySelector(`nav li a[href="#${id}"]`).parentElement.classList.remove('active');
+                }
+            });
+        });
+
+        // Track all sections that have an `id` applied
+        document.querySelectorAll('section[id]').forEach((section) => {
+            observer.observe(section);
+        });
+
+    });
+</script>
+
 <script>
     var chatbox = document.getElementById('fb-customer-chat');
     chatbox.setAttribute("page_id", "1453720424858441");
     chatbox.setAttribute("attribution", "biz_inbox");
 
-    window.fbAsyncInit = function() {
+    window.fbAsyncInit = function () {
         FB.init({
             xfbml: true,
             version: 'v11.0'
         });
     };
 
-    (function(d, s, id) {
+    (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s);

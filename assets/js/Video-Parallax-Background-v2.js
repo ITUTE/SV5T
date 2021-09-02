@@ -30,56 +30,5 @@ $(document).ready(function(){
 
 	if(!backgrounds.length) return;
 
-	var visible = [];
-	var scheduled;
-
-	$(window).on('scroll resize', scroll);
-
-	scroll();
-
-	function scroll(){
-
-		visible.length = 0;
-
-		for(var i = 0; i < backgrounds.length; i++){
-			var rect = backgrounds[i][0].parentNode.getBoundingClientRect();
-
-			if(rect.bottom > 0 && rect.top < window.innerHeight){
-				visible.push({
-					rect: rect,
-					node: backgrounds[i]
-				});
-			}
-
-		}
-
-		cancelAnimationFrame(scheduled);
-
-		if(visible.length){
-			scheduled = requestAnimationFrame(update);
-		}
-
-	}
-
-	function update(){
-
-		for(var i = 0; i < visible.length; i++){
-			var rect = visible[i].rect;
-			var node = visible[i].node[0];
-
-			var quot = Math.max(rect.bottom, 0) / (window.innerHeight + rect.height);
-            var shift = '';
-            if (node.hasAttribute('parallax-center')) {
-                var nodeHeight = visible[i].node.outerHeight();
-                shift = -((nodeHeight - rect.height)/2 + rect.top) + 'px';
-            } else {
-                shift = -rect.top+'px';
-            }
-            console.log(shift);
-			node.style.transform = 'translate3d(0, '+(shift)+', 0)';
-		}
-
-	}
-
 })();
 });
