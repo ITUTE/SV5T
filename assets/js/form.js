@@ -23,22 +23,23 @@ function nextPart() {
     } else {
         showPart(parts[current], parts[next]);
     }
-    saveValueToLocalStorage("current", next);
-    var progress = document.getElementById("progress");
-    var percent = (next + 1) * 100 / 8 + "%";
-    progress.ariaValueNow = percent;
-    progress.style.width = percent;
-    progress.innerText = percent;
+    if (current < parts.length)
+    {
+        saveValueToLocalStorage("current", next);
+        var progress = document.getElementById("progress");
+        var percent = (next + 1) * 100 / 8;
+        if (percent <= 100)
+        {
+            progress.ariaValueNow = percent + "%";
+            progress.style.width = percent + "%";
+            progress.innerText = percent + "%";
+        }
+    }
 }
 
 function prePart() {
     var current = localStorage.getItem("current");
     var pre = parseInt(current) - 1;
-    var progress = document.getElementById("progress");
-    var percent = (pre + 1) * 100 / 8 + "%";
-    progress.ariaValueNow = percent;
-    progress.style.width = percent;
-    progress.innerText = percent;
 
     saveValueToLocalStorage("current", pre);
     if (pre <= 0) {
@@ -56,6 +57,18 @@ function prePart() {
         btnNext.disabled = false;
     } else
         showPart(parts[current], parts[pre]);
+
+    if (current >= 0)
+    {
+        var progress = document.getElementById("progress");
+        var percent = (pre + 1) * 100 / 8;
+        if (percent >= 0)
+        {
+            progress.ariaValueNow = percent + "%";
+            progress.style.width = percent + "%";
+            progress.innerText = percent + "%";
+        }
+    }
 }
 
 function showPart(current, part) {
@@ -104,5 +117,5 @@ function saveValueToLocalStorage(field, value) {
 function submitForm() {
     window.alert("Gửi thành công!");
     //$('#model-message').modal('show');
-    window.open('https://itute.github.io/');
+    window.open('https://itute.github.io/SV5T/');
 }
