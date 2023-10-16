@@ -108,6 +108,7 @@ img {
   margin-right: -9px;
   -moz-transform: rotate(180deg);
   -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
@@ -140,6 +141,7 @@ img {
   left: -100px;
   text-align: right;
   padding: 10px;
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -163,12 +165,15 @@ img {
   display: block;
   width: 40px;
   height: 40px;
+  -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
+  -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
   text-align: center;
   -moz-box-shadow: 0 0 0 5px #f5f5f6;
+  -webkit-box-shadow: 0 0 0 5px #f5f5f6;
   box-shadow: 0 0 0 5px #f5f5f6;
   line-height: 40px;
   font-size: 15px;
@@ -200,8 +205,10 @@ img {
   background: #f5f5f6;
   padding: 1.7em;
   margin-left: 70px;
+  -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
+  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
@@ -238,6 +245,7 @@ img {
 }
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 span {
+  -webkit-opacity: .6;
   -moz-opacity: .6;
   opacity: .6;
   -ms-filter: alpha(opacity=60);
