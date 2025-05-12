@@ -1,3 +1,10 @@
+.white-bg-rounded {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  padding: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 /* 1. Enable smooth scrolling */
 
 html {
@@ -36,5 +43,69 @@ main > nav {
 
 .section-nav a:hover, .section-nav a:focus {
   color: #666;
+}
+
+/* iPhone SE, iPhone 6/7/8 */
+
+@media (max-width: 738px) {
+  .parallax-placeholder {
+    background-position: calc(100% + 100px) top !important;
+  }
+}
+
+/* iPhone X, 11, 12, 13, 14 (và đa số smartphone hiện nay) */
+
+@media (min-width: 739px) and (max-width: 850px) {
+  .parallax-placeholder {
+    background-position: calc(100% + 50px) top !important;
+  }
+}
+
+/* Phablet & small tablets (iPad Mini, Galaxy Tab nhỏ) */
+
+@media (min-width: 851px) and (max-width: 1024px) {
+  .parallax-placeholder {
+    background-position: right top !important;
+  }
+}
+
+/* iPad Pro và tablets lớn */
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .parallax-placeholder {
+    background-position: center top !important;
+  }
+}
+
+/* Android nhỏ (Galaxy A01, J2, J4, Xiaomi Redmi 7A, v.v.) */
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .parallax-placeholder {
+    background-position: calc(100% + 80px) top !important;
+  }
+}
+
+/* Android tầm trung (Galaxy A12, A23, M21, Redmi Note 10...) */
+
+@media (min-width: 481px) and (max-width: 600px) {
+  .parallax-placeholder {
+    background-position: calc(100% + 0px) top !important;
+  }
+}
+
+/* Android cao cấp (Galaxy S20–S24, Note 20, Pixel, v.v.) */
+
+@media (min-width: 601px) and (max-width: 768px) {
+  .parallax-placeholder {
+    background-position: calc(100% + 40px) top !important;
+  }
+}
+
+/* Tablet Android 7–10 inch (Galaxy Tab A, Lenovo Tab M series,...) */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .parallax-placeholder {
+    background-position: right top !important;
+  }
 }
 
